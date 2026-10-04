@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAIDVIK AYURVEDA & PANCHAKARMA HOSPITAL | Classical Healthcare, Doctor Consultancy & Appointments</title>
+
+  <!-- Google Fonts & FontAwesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ayur: {
+              dark: '#123321',
+              primary: '#19462e',
+              medium: '#285e3f',
+              light: '#f0f7f2',
+              gold: '#c59b27',
+              goldlight: '#fcf8ec',
+              goldhover: '#b0881c',
+              cream: '#fbfaf7',
+              surface: '#ffffff',
+              border: '#e6ece8'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Global Tweaks */
+    html { scroll-behavior: smooth; }
+    body { background-color: #fbfaf7; color: #1f2937; }
+    
+    /* Elegant Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f2; }
+    ::-webkit-scrollbar-thumb { background: #285e3f; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #123321; }
+
+    /* Infinite Marquee */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: inline-flex;
+      white-space: nowrap;
+      animation: marquee 38s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Modal Fade Animation */
+    .fade-in {
+      animation: fadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.97) translateY(8px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Printable Clinical Voucher Slip */
+    @media print {
+      body * { visibility: hidden; }
+      #printableSlip, #printableSlip * { visibility: visible; }
+      #printableSlip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 24px;
+        box-shadow: none !important;
+        border: 2px dashed #19462e !important;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased flex flex-col min-h-screen relative selection:bg-ayur-gold selection:text-white">
+
+  <!-- 1. TOP UTILITY BAR -->
+  <div class="bg-ayur-dark text-slate-300 text-xs py-2 px-4 sm:px-8 border-b border-white/10 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <span class="text-ayur-gold font-serif font-bold tracking-wide">
+          <i class="fa-solid fa-om mr-1"></i> VAIDVIK AYURVEDA AND PANCHAKARMA HOSPITAL
+        </span>
+        <span class="text-white/30">|</span>
+        <span class="text-slate-300"><i class="fa-solid fa-certificate text-ayur-gold mr-1"></i> Authentic Nadi Pariksha & Classical Therapies</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="tel:+917435023360" class="hover:text-ayur-gold transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone text-ayur-gold"></i> +91 74350-23360
+        </a>
+        <a href="mailto:vaidvikayurveda@gmail.com" class="hover:text-ayur-gold transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-envelope text-ayur-gold"></i> vaidvikayurveda@gmail.com
+        </a>
+        <div class="flex items-center gap-2 pl-3 border-l border-white/20">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-white/5 hover:bg-ayur-gold hover:text-ayur-dark flex items-center justify-center transition-all" title="Facebook"><i class="fa-brands fa-facebook-f text-[11px]"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-white/5 hover:bg-ayur-gold hover:text-ayur-dark flex items-center justify-center transition-all" title="Instagram"><i class="fa-brands fa-instagram text-[11px]"></i></a>
+          <a href="https://wa.me/917435023360" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-white/5 hover:bg-ayur-gold hover:text-ayur-dark flex items-center justify-center transition-all" title="WhatsApp"><i class="fa-brands fa-whatsapp text-[11px]"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN HEADER & SPA NAVIGATION -->
+  <header class="bg-white sticky top-0 z-40 border-b border-ayur-border shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
+      <!-- Hospital Brand Logo (Image photo format with fallback) -->
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-full overflow-hidden bg-ayur-light border-2 border-ayur-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform flex-shrink-0">
+          <img src="images/logo.png" alt="Vaidvik Ayurveda Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-ayur-primary text-ayur-gold flex items-center justify-center font-serif font-bold text-lg\'>VA</div>';">
+        </div>
+        <div>
+          <div class="font-serif text-lg sm:text-xl font-extrabold text-ayur-dark tracking-wide leading-none group-hover:text-ayur-primary transition-colors">
+            VAIDVIK AYURVEDA
+          </div>
+          <span class="text-[10px] sm:text-xs font-semibold tracking-widest text-ayur-gold uppercase block mt-1">
+            Panchakarma Hospital
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-7">
+        <button onclick="navigateTo('home')" id="nav-home" class="nav-tab text-sm font-semibold text-ayur-primary border-b-2 border-ayur-primary pb-1 transition-all">Home</button>
+        <button onclick="navigateTo('about')" id="nav-about" class="nav-tab text-sm font-semibold text-gray-600 hover:text-ayur-primary border-b-2 border-transparent pb-1 transition-all">About Vaidvik</button>
+        <button onclick="navigateTo('treatments')" id="nav-treatments" class="nav-tab text-sm font-semibold text-gray-600 hover:text-ayur-primary border-b-2 border-transparent pb-1 transition-all">Treatments & Therapies</button>
+        <button onclick="navigateTo('doctors')" id="nav-doctors" class="nav-tab text-sm font-semibold text-gray-600 hover:text-ayur-primary border-b-2 border-transparent pb-1 transition-all">Physicians</button>
+        <button onclick="navigateTo('gallery')" id="nav-gallery" class="nav-tab text-sm font-semibold text-gray-600 hover:text-ayur-primary border-b-2 border-transparent pb-1 transition-all">Hospital Tour</button>
+        <button onclick="navigateTo('blogs')" id="nav-blogs" class="nav-tab text-sm font-semibold text-gray-600 hover:text-ayur-primary border-b-2 border-transparent pb-1 transition-all">Ayurvedic Wisdom & Doshas</button>
+        <button onclick="navigateTo('contact')" id="nav-contact" class="nav-tab text-sm font-semibold text-gray-600 hover:text-ayur-primary border-b-2 border-transparent pb-1 transition-all">Contact & OPD</button>
+      </nav>
+
+      <!-- Action Hub (Search Trigger & Appointment Button) -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" title="Search treatments, symptoms, doctors" class="p-2.5 rounded-full text-gray-600 hover:text-ayur-primary hover:bg-ayur-light transition-colors">
+          <i class="fa-solid fa-magnifying-glass text-base"></i>
+        </button>
+
+        <button onclick="openBookingModal()" class="hidden sm:inline-flex items-center gap-2 bg-ayur-primary hover:bg-ayur-dark text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow hover:shadow-lg transition-all active:scale-95">
+          <i class="fa-solid fa-calendar-check text-ayur-gold text-sm"></i>
+          <span>Book Appointment</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button onclick="toggleMobileNav()" class="lg:hidden p-2 text-ayur-dark hover:text-ayur-primary focus:outline-none" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars text-xl" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileDrawer" class="hidden lg:hidden bg-white border-t border-ayur-border px-6 py-5 shadow-xl transition-all">
+      <div class="flex flex-col gap-3 font-semibold text-sm">
+        <button onclick="navigateTo('home'); toggleMobileNav()" class="text-left py-2 text-ayur-primary border-b border-gray-100 flex items-center justify-between">
+          <span>Home</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <button onclick="navigateTo('about'); toggleMobileNav()" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
+          <span>About Vaidvik</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <button onclick="navigateTo('treatments'); toggleMobileNav()" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
+          <span>Treatments & Therapies</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <button onclick="navigateTo('doctors'); toggleMobileNav()" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
+          <span>Our Physicians</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <button onclick="navigateTo('gallery'); toggleMobileNav()" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
+          <span>Hospital Tour</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <button onclick="navigateTo('blogs'); toggleMobileNav()" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
+          <span>Ayurvedic Wisdom &amp; Doshas</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <button onclick="navigateTo('contact'); toggleMobileNav()" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
+          <span>Contact &amp; Clinic Location</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+        <button onclick="openBookingModal(); toggleMobileNav()" class="mt-3 w-full bg-ayur-primary text-white py-3 rounded-xl text-center font-bold tracking-wide flex items-center justify-center gap-2">
+          <i class="fa-solid fa-calendar-check text-ayur-gold"></i>
+          Schedule Doctor Consultation
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. INFINITE PANCHAKARMA MARQUEE RIBBON -->
+  <div class="bg-ayur-primary text-white text-xs sm:text-sm font-serif tracking-wider overflow-hidden py-2.5 border-b border-ayur-gold/30 select-none">
+    <div class="animate-marquee gap-8 items-center">
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-spa text-ayur-gold"></i> VAIDVIK AYURVEDA &amp; PANCHAKARMA</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-leaf text-ayur-gold"></i> AUTHENTIC 5-FOLD PANCHAKARMA DETOX</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-om text-ayur-gold"></i> CHRONIC SPINE &amp; JOINT CARE</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-heart-pulse text-ayur-gold"></i> METABOLIC &amp; LIFESTYLE DISORDERS</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-droplet text-ayur-gold"></i> SHIRODHARA &amp; STRESS RELIEF</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-mortar-pestle text-ayur-gold"></i> 100% PURE HERBAL MEDICATIONS</span>
+      <!-- Duplicate Set for continuous loop -->
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-spa text-ayur-gold"></i> VAIDVIK AYURVEDA &amp; PANCHAKARMA</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-leaf text-ayur-gold"></i> AUTHENTIC 5-FOLD PANCHAKARMA DETOX</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-om text-ayur-gold"></i> CHRONIC SPINE &amp; JOINT CARE</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-heart-pulse text-ayur-gold"></i> METABOLIC &amp; LIFESTYLE DISORDERS</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-droplet text-ayur-gold"></i> SHIRODHARA &amp; STRESS RELIEF</span>
+      <span class="inline-flex items-center gap-2 mx-4"><i class="fa-solid fa-mortar-pestle text-ayur-gold"></i> 100% PURE HERBAL MEDICATIONS</span>
+    </div>
+  </div>
+
+  <!-- 4. SPA MAIN VIEWPORT -->
+  <main class="flex-grow">
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: HOME PAGE                          -->
+    <!-- ========================================== -->
+    <section id="view-home" class="page-view">
+      <!-- Hero Section -->
+      <div class="relative bg-gradient-to-r from-ayur-dark via-ayur-primary to-[#234d34] text-white py-20 lg:py-28 px-4 sm:px-8 overflow-hidden">
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#c59b27_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-ayur-gold/40 text-ayur-gold text-xs font-semibold tracking-widest uppercase">
+              <i class="fa-solid fa-award"></i> NABH Compliant Clinical Standards
+            </div>
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+              Root-Cause Ayurvedic Healing &amp; Classical Panchakarma
+            </h1>
+            <p class="text-slate-200 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+              At <strong class="text-ayur-gold font-semibold">Vaidvik Ayurveda Hospital</strong>, we combine authentic Vedic principles with clinical diagnosis. Reclaim hormonal balance, relieve joint degeneration, and detoxify with dedicated Panchakarma suites.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-4 justify-center lg:justify-start">
+              <button onclick="openBookingModal()" class="bg-ayur-gold hover:bg-ayur-goldhover text-ayur-dark px-7 py-3.5 rounded-xl font-bold text-sm tracking-wider uppercase shadow-lg shadow-black/20 hover:scale-[1.02] transition-all flex items-center gap-2">
+                <i class="fa-solid fa-stethoscope text-base"></i> Consult Doctor
+              </button>
+              <button onclick="scrollToDoshaQuiz()" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2">
+                <i class="fa-solid fa-dna text-ayur-gold"></i> Test Your Dosha (Quiz)
+              </button>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="pt-8 border-t border-white/15 grid grid-cols-3 gap-4 text-center lg:text-left">
+              <div>
+                <span class="block font-serif text-2xl sm:text-3xl font-extrabold text-ayur-gold">15,000+</span>
+                <span class="text-xs text-slate-300">Patients Healed</span>
+              </div>
+              <div>
+                <span class="block font-serif text-2xl sm:text-3xl font-extrabold text-ayur-gold">15+</span>
+                <span class="text-xs text-slate-300">Years Clinical Practice</span>
+              </div>
+              <div>
+                <span class="block font-serif text-2xl sm:text-3xl font-extrabold text-ayur-gold">99.4%</span>
+                <span class="text-xs text-slate-300">Positive Feedback</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image & Badge -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Panchakarma Ayurvedic Therapy" class="w-full h-96 object-cover hover:scale-105 transition-all duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-ayur-dark/90 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-xl p-4 text-ayur-dark shadow-md flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-ayur-light text-ayur-primary flex items-center justify-center text-lg flex-shrink-0">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xs uppercase tracking-wider text-ayur-primary">Holistic Pulse Diagnosis</h4>
+                  <p class="text-[11px] text-gray-600">Personalized Prakriti analysis before every Panchakarma therapy session.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick 4 Features Highlights -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white p-5 rounded-2xl shadow-md border border-ayur-border flex items-start gap-4 hover:-translate-y-1 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-ayur-light text-ayur-primary flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-gray-900 text-sm">Nadi Pariksha</h4>
+              <p class="text-xs text-gray-500 mt-1">Deep Ayurvedic pulse analysis to detect metabolic imbalance early.</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl shadow-md border border-ayur-border flex items-start gap-4 hover:-translate-y-1 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-ayur-goldlight text-ayur-gold flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-spa"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-gray-900 text-sm">Panchakarma Detox</h4>
+              <p class="text-xs text-gray-500 mt-1">Authentic 5-step cellular cleansing procedures supervised by Vaidyas.</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl shadow-md border border-ayur-border flex items-start gap-4 hover:-translate-y-1 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-ayur-light text-ayur-primary flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-bone"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-gray-900 text-sm">Joint & Spine Care</h4>
+              <p class="text-xs text-gray-500 mt-1">Specialized Kati Basti & Janu Basti therapies for arthritis & sciatica.</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl shadow-md border border-ayur-border flex items-start gap-4 hover:-translate-y-1 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-ayur-goldlight text-ayur-gold flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-gray-900 text-sm">Pure Herbal Medicines</h4>
+              <p class="text-xs text-gray-500 mt-1">Formulations processed according to classical Charaka Samhita texts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Feature: Ayurvedic Dosha Calculator -->
+      <section id="dosha-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-ayur-primary to-ayur-dark text-white rounded-3xl p-6 sm:p-10 shadow-xl overflow-hidden relative">
+          <div class="max-w-3xl">
+            <span class="text-ayur-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+              <i class="fa-solid fa-atom"></i> Free Self-Assessment Tool
+            </span>
+            <h2 class="font-serif text-2xl sm:text-4xl font-bold mt-2">
+              Identify Your Dominant Dosha (Prakriti)
+            </h2>
+            <p class="text-slate-200 text-sm mt-2">
+              Ayurveda categorizes mind-body constitutions into Vata (Air/Space), Pitta (Fire/Water), and Kapha (Earth/Water). Answer 3 quick traits to receive immediate lifestyle advice:
+            </p>
+
+            <!-- Quiz Steps Container -->
+            <div id="quizContainer" class="mt-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6">
+              <!-- Question 1 -->
+              <div id="q1" class="quiz-q space-y-3">
+                <span class="text-xs font-semibold text-ayur-gold">Question 1 of 3: Body Frame & Weight Tendency</span>
+                <p class="font-medium text-sm sm:text-base">How would you characterize your natural body frame and metabolism?</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                  <button onclick="recordQuizAnswer('vata', 1)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>A) Slender / Lean</strong><br><span class="opacity-80 text-[11px]">Hard to gain weight, quick walker</span>
+                  </button>
+                  <button onclick="recordQuizAnswer('pitta', 1)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>B) Medium / Athletic</strong><br><span class="opacity-80 text-[11px]">Strong digestion, easily warm</span>
+                  </button>
+                  <button onclick="recordQuizAnswer('kapha', 1)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>C) Broad / Sturdy</strong><br><span class="opacity-80 text-[11px]">Gains weight readily, calm nature</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Question 2 -->
+              <div id="q2" class="quiz-q hidden space-y-3">
+                <span class="text-xs font-semibold text-ayur-gold">Question 2 of 3: Skin & Temperature Tolerance</span>
+                <p class="font-medium text-sm sm:text-base">How does your skin behave, and what climate do you dislike most?</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                  <button onclick="recordQuizAnswer('vata', 2)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>Dry / Rough skin</strong><br><span class="opacity-80 text-[11px]">Averts cold & dry, chilly winds</span>
+                  </button>
+                  <button onclick="recordQuizAnswer('pitta', 2)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>Sensitive / Flushed</strong><br><span class="opacity-80 text-[11px]">Averts extreme heat and humidity</span>
+                  </button>
+                  <button onclick="recordQuizAnswer('kapha', 2)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>Oily / Soft & Thick</strong><br><span class="opacity-80 text-[11px]">Dislikes damp, cloudy, cold weather</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Question 3 -->
+              <div id="q3" class="quiz-q hidden space-y-3">
+                <span class="text-xs font-semibold text-ayur-gold">Question 3 of 3: Stress Reaction & Sleep</span>
+                <p class="font-medium text-sm sm:text-base">Under extreme stress or exhaustion, what is your standard reaction?</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                  <button onclick="recordQuizAnswer('vata', 3)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>Anxiety & Overthinking</strong><br><span class="opacity-80 text-[11px]">Restless, interrupted sleep</span>
+                  </button>
+                  <button onclick="recordQuizAnswer('pitta', 3)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>Irritation & Anger</strong><br><span class="opacity-80 text-[11px]">Short, intense sleep with dreams</span>
+                  </button>
+                  <button onclick="recordQuizAnswer('kapha', 3)" class="p-3.5 bg-white/10 hover:bg-ayur-gold hover:text-ayur-dark rounded-xl text-xs sm:text-sm text-left transition-all border border-white/10">
+                    <strong>Withdrawal & Lethargy</strong><br><span class="opacity-80 text-[11px]">Deep, heavy, hard to wake up</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Quiz Result Display -->
+              <div id="quizResult" class="hidden space-y-4">
+                <div class="p-5 rounded-2xl bg-white text-ayur-dark shadow-lg">
+                  <div class="flex items-center gap-3">
+                    <span id="doshaIcon" class="w-11 h-11 rounded-full bg-ayur-light text-ayur-primary flex items-center justify-center text-xl flex-shrink-0"></span>
+                    <div>
+                      <span class="text-xs uppercase tracking-wider text-ayur-gold font-bold">Your Primary Constitutional Tendency</span>
+                      <h3 id="doshaName" class="font-serif text-xl font-bold text-ayur-dark"></h3>
+                    </div>
+                  </div>
+                  <p id="doshaDesc" class="text-xs sm:text-sm text-gray-700 mt-3 leading-relaxed"></p>
+                  <div class="mt-4 pt-3 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3">
+                    <span id="doshaRecommendation" class="text-xs font-semibold text-ayur-primary"></span>
+                    <button onclick="openBookingModal()" class="text-xs bg-ayur-primary hover:bg-ayur-dark text-white font-bold py-2.5 px-4 rounded-xl transition-all">
+                      Consult for In-Depth Nadi Pariksha
+                    </button>
+                  </div>
+                </div>
+                <button onclick="resetDoshaQuiz()" class="text-xs text-slate-300 hover:text-white underline">
+                  <i class="fa-solid fa-rotate-left mr-1"></i> Retake Dosha Test
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Feature: Panchakarma Estimator -->
+      <section class="py-12 bg-white border-y border-ayur-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Transparent Planning</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ayur-dark mt-1">Estimate Your Panchakarma Session</h2>
+            <p class="text-gray-600 text-sm mt-2">Select therapies recommended by physicians to preview estimated clinical duration, herbs involved, and package estimates.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Left Checklist -->
+            <div class="lg:col-span-7 bg-ayur-cream p-6 rounded-2xl border border-ayur-border space-y-4">
+              <h4 class="font-serif font-bold text-ayur-dark text-base border-b border-gray-200 pb-2">Select Recommended Therapies:</h4>
+              
+              <label class="flex items-center justify-between p-3.5 bg-white rounded-xl border border-gray-200 cursor-pointer hover:border-ayur-primary transition-all">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="therapy-calc-check h-5 w-5 text-ayur-primary rounded accent-ayur-primary" value="shirodhara" onchange="calculateTherapyEstimate()">
+                  <div>
+                    <strong class="text-sm text-gray-800">Shirodhara (Medicated Oil Stream)</strong>
+                    <p class="text-xs text-gray-500">For Insomnia, Anxiety, Hypertension & Migraines</p>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-ayur-primary">45 Mins / ₹1,500</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 bg-white rounded-xl border border-gray-200 cursor-pointer hover:border-ayur-primary transition-all">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="therapy-calc-check h-5 w-5 text-ayur-primary rounded accent-ayur-primary" value="abhyanga" onchange="calculateTherapyEstimate()">
+                  <div>
+                    <strong class="text-sm text-gray-800">Full Body Abhyanga & Swedana (Herbal Steam)</strong>
+                    <p class="text-xs text-gray-500">Full lymphatic detox, joint lubrication & stiffness release</p>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-ayur-primary">60 Mins / ₹1,800</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 bg-white rounded-xl border border-gray-200 cursor-pointer hover:border-ayur-primary transition-all">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="therapy-calc-check h-5 w-5 text-ayur-primary rounded accent-ayur-primary" value="katibasti" onchange="calculateTherapyEstimate()">
+                  <div>
+                    <strong class="text-sm text-gray-800">Kati / Janu Basti (Localized Spinal Pool)</strong>
+                    <p class="text-xs text-gray-500">Degenerative disc diseases, lumbar spondylosis & knee arthritis</p>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-ayur-primary">40 Mins / ₹1,200</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 bg-white rounded-xl border border-gray-200 cursor-pointer hover:border-ayur-primary transition-all">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="therapy-calc-check h-5 w-5 text-ayur-primary rounded accent-ayur-primary" value="nasya" onchange="calculateTherapyEstimate()">
+                  <div>
+                    <strong class="text-sm text-gray-800">Nasya Karma (Nasal Errhine Protocol)</strong>
+                    <p class="text-xs text-gray-500">Cervical pain, sinus headaches, frozen shoulder & hair health</p>
+                  </div>
+                </div>
+                <span class="text-xs font-semibold text-ayur-primary">30 Mins / ₹900</span>
+              </label>
+            </div>
+
+            <!-- Right Calculation Output -->
+            <div class="lg:col-span-5 bg-gradient-to-br from-ayur-dark to-ayur-primary text-white p-6 rounded-2xl shadow-xl space-y-5">
+              <h4 class="font-serif font-bold text-lg text-ayur-gold border-b border-white/20 pb-3">Session Summary</h4>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between items-center text-slate-300">
+                  <span>Selected Therapies:</span>
+                  <strong id="calcCount" class="text-white">0 procedures</strong>
+                </div>
+                <div class="flex justify-between items-center text-slate-300">
+                  <span>Estimated Sitting Duration:</span>
+                  <strong id="calcDuration" class="text-white">0 minutes</strong>
+                </div>
+                <div class="flex justify-between items-center text-slate-300">
+                  <span>Approximate Clinical Fee:</span>
+                  <strong id="calcPrice" class="text-2xl font-serif text-ayur-gold">₹0</strong>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-white/10 rounded-xl text-xs text-slate-200 border border-white/15">
+                <i class="fa-solid fa-circle-info text-ayur-gold mr-1"></i> Exact medicated tailams (Mahanarayana, Ksheerabala, or Dhanwantharam) are customized following your doctor pulse diagnosis.
+              </div>
+
+              <button onclick="bookWithPreselectedTherapies()" class="w-full bg-ayur-gold hover:bg-ayur-goldhover text-ayur-dark font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all">
+                Book This Treatment Package
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Patient Testimonials Carousel -->
+      <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Verified Recoveries</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ayur-dark mt-1">Patient Testimonials</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-ayur-border shadow-sm flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="text-ayur-gold text-sm flex gap-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-gray-600 italic">"I was advised surgery for L4-L5 disc slip. The 14-day Kati Basti & Panchakarma at Dwija Ayurveda under Dr. Jagdish gave me permanent pain relief without surgery."</p>
+            </div>
+            <div class="pt-4 border-t border-gray-100 flex items-center gap-3 mt-4">
+              <div class="w-9 h-9 rounded-full bg-ayur-light text-ayur-primary font-bold flex items-center justify-center text-xs">RP</div>
+              <div>
+                <strong class="text-xs text-gray-900 block">Rajesh Patel</strong>
+                <span class="text-[10px] text-gray-400">Gota, Ahmedabad • Lumbar Spine Care</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-ayur-border shadow-sm flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="text-ayur-gold text-sm flex gap-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-gray-600 italic">"The Nadi Pariksha identified my gut inflammation and chronic acidity within minutes. Within 3 weeks of their herbal concoctions and diet, I stopped all antacids."</p>
+            </div>
+            <div class="pt-4 border-t border-gray-100 flex items-center gap-3 mt-4">
+              <div class="w-9 h-9 rounded-full bg-ayur-goldlight text-ayur-gold font-bold flex items-center justify-center text-xs">SM</div>
+              <div>
+                <strong class="text-xs text-gray-900 block">Sneha Mehta</strong>
+                <span class="text-[10px] text-gray-400">Surat, Gujarat • Chronic Acidity & GERD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-ayur-border shadow-sm flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="text-ayur-gold text-sm flex gap-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-gray-600 italic">"Excellent hospitality, extremely hygienic therapy suites, and genuine Panchakarma practitioners. Shirodhara here completely cured my 2-year insomnia."</p>
+            </div>
+            <div class="pt-4 border-t border-gray-100 flex items-center gap-3 mt-4">
+              <div class="w-9 h-9 rounded-full bg-ayur-light text-ayur-primary font-bold flex items-center justify-center text-xs">AK</div>
+              <div>
+                <strong class="text-xs text-gray-900 block">Anand Kulkarni</strong>
+                <span class="text-[10px] text-gray-400">Ahmedabad • Stress & Shirodhara</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: ABOUT US                           -->
+    <!-- ========================================== -->
+    <section id="view-about" class="page-view hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Our Heritage & Mission</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ayur-dark mt-1">About Vaidvik Ayurveda &amp; Panchakarma Hospital</h1>
+        <p class="text-gray-600 text-sm sm:text-base mt-3 leading-relaxed">
+          'Vaidvik' represents the sacred lineage of authentic Vedic physicians (Vaidyas). Our mission is to restore lasting health, vitality, and cellular harmony through classical Ayurvedic principles and modern clinical safety.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <img src="https://images.unsplash.com/photo-1512290900672-1f4115b80a22?auto=format&fit=crop&w=900&q=80" alt="Ayurvedic Clinic" class="rounded-2xl shadow-xl w-full h-[400px] object-cover border-4 border-white">
+        </div>
+        <div class="space-y-6">
+          <div class="border-l-4 border-ayur-primary pl-4">
+            <h3 class="font-serif text-xl font-bold text-ayur-dark">Vedic Roots, Evidence-Based Application</h3>
+            <p class="text-sm text-gray-600 mt-2">
+              We do not believe in superficial symptom suppression. Every disease originates from agni-mandya (impaired metabolic fire) and toxin (Ama) accumulation in srotas (channels). We purify the roots.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-ayur-primary mt-1"></i>
+              <div>
+                <strong class="text-sm text-gray-900">Customized Classical Herb Preparations</strong>
+                <p class="text-xs text-gray-500">Every decoction, kashayam, and medicated ghee is prepared without heavy chemical fillers.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-ayur-primary mt-1"></i>
+              <div>
+                <strong class="text-sm text-gray-900">Separate Hygienic Male & Female Therapy Theatres</strong>
+                <p class="text-xs text-gray-500">Strict adherence to patient privacy, sanitized linen, and trained certified therapists.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-ayur-primary mt-1"></i>
+              <div>
+                <strong class="text-sm text-gray-900">NABH Hygiene Protocols</strong>
+                <p class="text-xs text-gray-500">Regular sterilization of droni tables, brass shirodhara pots, and therapeutic apparatus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-8 rounded-2xl border border-ayur-border shadow-sm text-center">
+          <div class="w-16 h-16 bg-ayur-light text-ayur-primary rounded-2xl mx-auto flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-ayur-dark">Our Vision</h4>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">To make classical Panchakarma therapy the preferred primary healthcare choice for chronic lifestyle conditions globally.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-ayur-border shadow-sm text-center">
+          <div class="w-16 h-16 bg-ayur-goldlight text-ayur-gold rounded-2xl mx-auto flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-ayur-dark">Our Mission</h4>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">Providing compassionate, individualized, and transparent clinical consultations with genuine Ayurvedic therapeutics.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-ayur-border shadow-sm text-center">
+          <div class="w-16 h-16 bg-ayur-light text-ayur-primary rounded-2xl mx-auto flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+          <h4 class="font-serif font-bold text-lg text-ayur-dark">Our Ethics</h4>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2">Never prescribing unnecessary procedures. Ensuring patient comfort, dietary education, and lasting cure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: TREATMENTS & THERAPIES (FILTERABLE) -->
+    <!-- ========================================== -->
+    <section id="view-treatments" class="page-view hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Holistic Healthcare Directory</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ayur-dark mt-1">Our Treatments & Panchakarma Therapies</h1>
+        <p class="text-gray-600 text-sm mt-2">Browse therapies categorized by specialty. Click on any treatment card to view indication, procedure, and duration details.</p>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-2 pt-6">
+          <button onclick="filterTreatments('all')" class="treatment-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-ayur-primary text-white transition-all shadow-sm" data-category="all">All Specialties</button>
+          <button onclick="filterTreatments('panchakarma')" class="treatment-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-gray-100 transition-all border border-gray-200" data-category="panchakarma">Panchakarma</button>
+          <button onclick="filterTreatments('spine')" class="treatment-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-gray-100 transition-all border border-gray-200" data-category="spine">Spine & Joint</button>
+          <button onclick="filterTreatments('lifestyle')" class="treatment-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-gray-100 transition-all border border-gray-200" data-category="lifestyle">Lifestyle & Metabolic</button>
+          <button onclick="filterTreatments('skin')" class="treatment-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:bg-gray-100 transition-all border border-gray-200" data-category="skin">Skin & Hair</button>
+        </div>
+      </div>
+
+      <!-- Treatments Card Grid -->
+      <div id="treatmentsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Treatment Card 1 -->
+        <div class="treatment-item bg-white rounded-2xl overflow-hidden border border-ayur-border shadow-sm hover:shadow-lg transition-all group" data-category="panchakarma">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80" alt="Shirodhara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-ayur-dark/85 text-ayur-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Panchakarma</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-lg text-ayur-dark">Shirodhara Therapy</h3>
+            <p class="text-xs text-gray-500 mt-2 line-clamp-2">Continuous pouring of medicated herbal oils or buttermilk (Takradhara) on the third eye chakra to calm the central nervous system.</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs font-semibold text-ayur-primary"><i class="fa-solid fa-clock mr-1"></i> 45 - 60 Mins</span>
+              <button onclick="openTreatmentModal('Shirodhara', 'Continuous rhythm of medicated oils on the forehead.', 'Insomnia, Chronic Stress, Migraine, Anxiety, Hypertension, Memory Fatigue.', '7 to 14 Days recommended', '₹1,500 / session')" class="text-xs font-bold text-ayur-gold hover:text-ayur-goldhover flex items-center gap-1">
+                Full Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treatment Card 2 -->
+        <div class="treatment-item bg-white rounded-2xl overflow-hidden border border-ayur-border shadow-sm hover:shadow-lg transition-all group" data-category="spine">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Kati Basti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-ayur-dark/85 text-ayur-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Spine & Joint</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-lg text-ayur-dark">Kati & Janu Basti</h3>
+            <p class="text-xs text-gray-500 mt-2 line-clamp-2">Retention of warm herbal oil dammed over the lumbosacral or knee joint area using black gram dough to regenerate cartilage.</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs font-semibold text-ayur-primary"><i class="fa-solid fa-clock mr-1"></i> 40 Mins</span>
+              <button onclick="openTreatmentModal('Kati & Janu Basti', 'Medicated oil dam pool over spine and knee joints.', 'Sciatica, Slip Disc, Spondylosis, Knee Osteoarthritis, Postural Pain.', '7 to 14 Days recommended', '₹1,200 / session')" class="text-xs font-bold text-ayur-gold hover:text-ayur-goldhover flex items-center gap-1">
+                Full Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treatment Card 3 -->
+        <div class="treatment-item bg-white rounded-2xl overflow-hidden border border-ayur-border shadow-sm hover:shadow-lg transition-all group" data-category="panchakarma">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80" alt="Virechana Detox" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-ayur-dark/85 text-ayur-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Panchakarma</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-lg text-ayur-dark">Virechana (Purgation Detox)</h3>
+            <p class="text-xs text-gray-500 mt-2 line-clamp-2">Targeted metabolic cleansing of the liver, gallbladder, and small intestine to purge excess aggravated Pitta dosha.</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs font-semibold text-ayur-primary"><i class="fa-solid fa-clock mr-1"></i> Full Protocol</span>
+              <button onclick="openTreatmentModal('Virechana Detox', 'Controlled medical purgation after preparatory Snehana & Swedana.', 'Chronic Eczema, Psoriasis, Liver congestion, Acidity, Hormonal Acne.', 'Requires 7-Day Snehapana', 'Custom Package')" class="text-xs font-bold text-ayur-gold hover:text-ayur-goldhover flex items-center gap-1">
+                Full Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treatment Card 4 -->
+        <div class="treatment-item bg-white rounded-2xl overflow-hidden border border-ayur-border shadow-sm hover:shadow-lg transition-all group" data-category="lifestyle">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="PCOD and Diabetes Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-ayur-dark/85 text-ayur-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Lifestyle</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-lg text-ayur-dark">PCOD & Thyroid Metabolic Care</h3>
+            <p class="text-xs text-gray-500 mt-2 line-clamp-2">Correcting cellular insulin sensitivity and ovarian follicular health via Basti detox and anti-inflammatory herbal kashayams.</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs font-semibold text-ayur-primary"><i class="fa-solid fa-clock mr-1"></i> Monthly Cycle</span>
+              <button onclick="openTreatmentModal('PCOD & Endocrine Rebalance', 'Deep metabolic detoxification and hormonal axis stabilization.', 'Irregular Periods, Hypothyroidism, Infertility, Unexplained Weight Gain.', '3 to 6 Months Course', 'Consultation Basis')" class="text-xs font-bold text-ayur-gold hover:text-ayur-goldhover flex items-center gap-1">
+                Full Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treatment Card 5 -->
+        <div class="treatment-item bg-white rounded-2xl overflow-hidden border border-ayur-border shadow-sm hover:shadow-lg transition-all group" data-category="skin">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Ayurvedic Skin Protocol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-ayur-dark/85 text-ayur-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Skin & Hair</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-lg text-ayur-dark">Psoriasis & Eczema Management</h3>
+            <p class="text-xs text-gray-500 mt-2 line-clamp-2">Blood purification (Raktamokshana and Takradhara) combined with non-steroidal botanical lepams for healthy epidermal renewal.</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs font-semibold text-ayur-primary"><i class="fa-solid fa-clock mr-1"></i> Clinical Protocol</span>
+              <button onclick="openTreatmentModal('Psoriasis & Chronic Skin Care', 'Blood purification and topical medicated Takra therapy.', 'Plaque Psoriasis, Dry Eczema, Dermatitis, Fungal scaling.', 'Multi-Stage Purification', 'Customized')" class="text-xs font-bold text-ayur-gold hover:text-ayur-goldhover flex items-center gap-1">
+                Full Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treatment Card 6 -->
+        <div class="treatment-item bg-white rounded-2xl overflow-hidden border border-ayur-border shadow-sm hover:shadow-lg transition-all group" data-category="panchakarma">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1512290900672-1f4115b80a22?auto=format&fit=crop&w=600&q=80" alt="Nasya Therapy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-ayur-dark/85 text-ayur-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Panchakarma</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-lg text-ayur-dark">Nasya Karma (Nasal Errhine)</h3>
+            <p class="text-xs text-gray-500 mt-2 line-clamp-2">Administration of medicated drops (Anu Taila) into nostrils, accessing supra-clavicular cranial channels directly.</p>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs font-semibold text-ayur-primary"><i class="fa-solid fa-clock mr-1"></i> 30 Mins</span>
+              <button onclick="openTreatmentModal('Nasya Karma', 'Head & facial steam followed by specific herbal oil drops.', 'Chronic Sinusitis, Cervical Spondylosis, Facial Paralysis, Premature Hair Graying.', '7 to 21 Days', '₹900 / session')" class="text-xs font-bold text-ayur-gold hover:text-ayur-goldhover flex items-center gap-1">
+                Full Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 4: DOCTORS / CLINICAL TEAM            -->
+    <!-- ========================================== -->
+    <section id="view-doctors" class="page-view hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Senior Vaidyas & Consultants</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ayur-dark mt-1">Our Expert Ayurvedic Physicians</h1>
+        <p class="text-gray-600 text-sm mt-2">Certified BAMS and MD Ayurvedic doctors with extensive clinical records in pulse diagnosis and Panchakarma execution.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Doctor 1 -->
+        <div class="bg-white rounded-2xl border border-ayur-border shadow-md overflow-hidden flex flex-col justify-between">
+          <div class="p-6">
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Dr. Jagdish Sharma" class="w-20 h-20 rounded-2xl object-cover border-2 border-ayur-gold">
+              <div>
+                <h3 class="font-serif font-bold text-lg text-ayur-dark leading-snug">Dr. Jagdish Sharma</h3>
+                <span class="text-xs text-ayur-primary font-semibold block">B.A.M.S., M.D. (Ayurveda)</span>
+                <span class="text-[11px] text-gray-500 font-medium">Chief Panchakarma Consultant</span>
+              </div>
+            </div>
+            <div class="mt-4 space-y-2 text-xs text-gray-600">
+              <p><strong>Experience:</strong> 16+ Years Clinical Excellence</p>
+              <p><strong>Specialty:</strong> Nadi Pariksha, Chronic Degenerative Spine Disorders, Liver & Metabolic Disease.</p>
+              <p><strong>OPD Days:</strong> Monday to Saturday (Morning & Evening)</p>
+            </div>
+          </div>
+          <div class="p-4 bg-ayur-light border-t border-ayur-border flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-800">OPD: ₹500</span>
+            <button onclick="bookWithDoctor('Dr. Jagdish Sharma')" class="bg-ayur-primary hover:bg-ayur-dark text-white px-4 py-2 rounded-lg text-xs font-bold transition-all">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="bg-white rounded-2xl border border-ayur-border shadow-md overflow-hidden flex flex-col justify-between">
+          <div class="p-6">
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1594824813576-0c6a51d957f8?auto=format&fit=crop&w=400&q=80" alt="Dr. Neha Trivedi" class="w-20 h-20 rounded-2xl object-cover border-2 border-ayur-gold">
+              <div>
+                <h3 class="font-serif font-bold text-lg text-ayur-dark leading-snug">Dr. Neha Trivedi</h3>
+                <span class="text-xs text-ayur-primary font-semibold block">B.A.M.S., PGD (Panchakarma)</span>
+                <span class="text-[11px] text-gray-500 font-medium">Senior Vaidya & Gynecologist (Ayur)</span>
+              </div>
+            </div>
+            <div class="mt-4 space-y-2 text-xs text-gray-600">
+              <p><strong>Experience:</strong> 11+ Years Experience</p>
+              <p><strong>Specialty:</strong> Infertility, PCOD/PCOS, Hormonal Axis Imbalances, Postpartum Garbha Sanskar.</p>
+              <p><strong>OPD Days:</strong> Monday, Wednesday, Friday</p>
+            </div>
+          </div>
+          <div class="p-4 bg-ayur-light border-t border-ayur-border flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-800">OPD: ₹500</span>
+            <button onclick="bookWithDoctor('Dr. Neha Trivedi')" class="bg-ayur-primary hover:bg-ayur-dark text-white px-4 py-2 rounded-lg text-xs font-bold transition-all">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="bg-white rounded-2xl border border-ayur-border shadow-md overflow-hidden flex flex-col justify-between">
+          <div class="p-6">
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80" alt="Dr. Pradeep Varma" class="w-20 h-20 rounded-2xl object-cover border-2 border-ayur-gold">
+              <div>
+                <h3 class="font-serif font-bold text-lg text-ayur-dark leading-snug">Dr. Pradeep Varma</h3>
+                <span class="text-xs text-ayur-primary font-semibold block">B.A.M.S., M.S. (Shalya Tantra)</span>
+                <span class="text-[11px] text-gray-500 font-medium">Anorectal & Spine Specialist</span>
+              </div>
+            </div>
+            <div class="mt-4 space-y-2 text-xs text-gray-600">
+              <p><strong>Experience:</strong> 14+ Years Practice</p>
+              <p><strong>Specialty:</strong> Kshara Sutra Therapy for Piles & Fistula, Joint Injections & Agnikarma.</p>
+              <p><strong>OPD Days:</strong> Tuesday, Thursday, Saturday</p>
+            </div>
+          </div>
+          <div class="p-4 bg-ayur-light border-t border-ayur-border flex items-center justify-between">
+            <span class="text-xs font-bold text-gray-800">OPD: ₹500</span>
+            <button onclick="bookWithDoctor('Dr. Pradeep Varma')" class="bg-ayur-primary hover:bg-ayur-dark text-white px-4 py-2 rounded-lg text-xs font-bold transition-all">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 5: PHOTO GALLERY WITH LIGHTBOX        -->
+    <!-- ========================================== -->
+    <section id="view-gallery" class="page-view hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Clinical Infrastructure</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ayur-dark mt-1">Vaidvik Hospital Facilities &amp; Suites</h1>
+        <p class="text-gray-600 text-sm mt-2">Take a visual tour through our authentic wooden droni therapy suites, herbal pharmacy, and consultation chambers.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Photo 1 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80', 'Classical Panchakarma Droni Suite')">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Therapy Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=80', 'Shirodhara Brass Pot Apparatus')">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80" alt="Shirodhara" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1512290900672-1f4115b80a22?auto=format&fit=crop&w=1200&q=80', 'Herbal Pharmacy & Classical Kashayams')">
+          <img src="https://images.unsplash.com/photo-1512290900672-1f4115b80a22?auto=format&fit=crop&w=600&q=80" alt="Pharmacy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80', 'Doctor Consultation Chambers')">
+          <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80" alt="Consultation Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80', 'Spine Basti Medicated Pool Treatment')">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Kati Basti" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80', 'Relaxation & Yoga Garden Lounge')">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Yoga Lounge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=1200&q=80', 'Pure Organic Herbal Ingredients')">
+          <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=600&q=80" alt="Herbs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="relative group rounded-xl overflow-hidden cursor-pointer h-52 bg-gray-200" onclick="openLightbox('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1200&q=80', 'Clinical Reception & Welcome Desk')">
+          <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80" alt="Reception" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+          <div class="absolute inset-0 bg-ayur-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+            <i class="fa-solid fa-expand text-2xl"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 7: CONTACT & OPD                      -->
+    <!-- ========================================== -->
+    <section id="view-contact" class="page-view hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Vaidvik Ayurveda Hospital</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ayur-dark mt-1">Contact &amp; Consultation OPD</h1>
+        <p class="text-gray-600 text-sm mt-2">Visit our clinical center or schedule an online video consultation from anywhere.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Blog 1 -->
+        <article class="bg-white rounded-2xl border border-ayur-border overflow-hidden shadow-sm hover:shadow-md transition-all">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Joint Pain" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-ayur-gold">Spine & Joints</span>
+            <h3 class="font-serif font-bold text-base text-ayur-dark mt-1">Why Knee Pain Isn't Just "Old Age" in Ayurveda</h3>
+            <p class="text-xs text-gray-600 mt-2 line-clamp-3">Ayurveda views joint stiffness as an accumulation of dry Vata combined with Ama toxins that sap the nourishing Shleshaka Kapha fluid...</p>
+            <button onclick="openBlogModal('Why Knee Pain Isn\'t Just Old Age in Ayurveda', 'According to Charaka Samhita, sandhivata (osteoarthritis) begins when dry, cool Vata enters depleted bone channels. Standard pain killers irritate stomach linings without rehydrating cartilage. Classical Janu Basti combined with Guggulu formulations and Dashamoola steam lubricates joints from within, preventing invasive joint replacements in over 85% of early diagnosed stages.')" class="mt-4 text-xs font-bold text-ayur-primary hover:text-ayur-dark flex items-center gap-1">
+              Read Complete Article <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Blog 2 -->
+        <article class="bg-white rounded-2xl border border-ayur-border overflow-hidden shadow-sm hover:shadow-md transition-all">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80" alt="Insomnia" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-ayur-gold">Mind & Nervous Health</span>
+            <h3 class="font-serif font-bold text-base text-ayur-dark mt-1">Overcoming Chronic Insomnia Without Sedative Pills</h3>
+            <p class="text-xs text-gray-600 mt-2 line-clamp-3">High Prana Vata disturbs the nervous axis. Learn how bedtime foot massage with Brahmi oil and Shirodhara resets circadian cycles...</p>
+            <button onclick="openBlogModal('Overcoming Chronic Insomnia Without Sedatives', 'An overstimulated mind corresponds to Prana Vata and Sadhaka Pitta hyper-activity. Applying pure warm sesame oil or Ksheerabala taila to the soles (Padabhyanga) before sleeping grounds ascending nervous energy. Coupled with 7 sessions of medicated buttermilk Shirodhara, natural melatonin secretion is restored without sleeping pill dependencies.')" class="mt-4 text-xs font-bold text-ayur-primary hover:text-ayur-dark flex items-center gap-1">
+              Read Complete Article <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Blog 3 -->
+        <article class="bg-white rounded-2xl border border-ayur-border overflow-hidden shadow-sm hover:shadow-md transition-all">
+          <img src="https://images.unsplash.com/photo-1512290900672-1f4115b80a22?auto=format&fit=crop&w=600&q=80" alt="Gut Health" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-ayur-gold">Metabolic Agni</span>
+            <h3 class="font-serif font-bold text-base text-ayur-dark mt-1">The 3 Rules of Agni: Why All Diseases Begin in the Gut</h3>
+            <p class="text-xs text-gray-600 mt-2 line-clamp-3">Hippocrates said all disease begins in the gut; Acharya Vagbhata wrote it 2000 years prior: Rogaah Sarvepi Mandegnau. How to kindle digestive fire...</p>
+            <button onclick="openBlogModal('The 3 Rules of Agni: Gut Health Mastery', 'In Ayurveda, if food is not digested properly, it turns into sticky metabolic residue called Ama. Ama travels through blood vessels triggering autoimmune responses, plaque, cholesterol, and arthritis. Simple habits such as sipping warm ginger water before meals and not drinking ice-cold liquids with food kindle Agni and clear 80% of everyday digestive distress.')" class="mt-4 text-xs font-bold text-ayur-primary hover:text-ayur-dark flex items-center gap-1">
+              Read Complete Article <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 7: CONTACT & OPD (CLONED EXACT)       -->
+    <!-- ========================================== -->
+    <section id="view-contact" class="page-view hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-ayur-gold text-xs font-bold tracking-widest uppercase">Dwija Ayurveda Hospital</span>
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ayur-dark mt-1">Contact & Consultation OPD</h1>
+        <p class="text-gray-600 text-sm mt-2">Visit our clinical center in Gota, Ahmedabad or schedule an online video consultation from anywhere.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left: Hospital Contact Details -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-white p-6 rounded-2xl border-l-4 border-ayur-primary border-y border-r border-ayur-border shadow-sm flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-ayur-light text-ayur-primary flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-ayur-dark">Hospital Address</h4>
+              <p class="text-xs text-gray-600 mt-1 leading-relaxed">
+                First Floor, Western Prime, FF-20, Gota - Jagatpur Road, near Devnagar Gam Road, Gota, Ahmedabad, Gujarat 382470
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border-l-4 border-ayur-gold border-y border-r border-ayur-border shadow-sm flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-ayur-goldlight text-ayur-gold flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-ayur-dark">Helpline & WhatsApp</h4>
+              <p class="text-xs text-gray-600 mt-1">
+                Call: <a href="tel:+917435023360" class="font-bold text-ayur-primary hover:underline">+91 74350-23360</a><br>
+                Email: <a href="mailto:dwijaayurveda@gmail.com" class="text-gray-600 hover:text-ayur-primary">dwijaayurveda@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border-l-4 border-ayur-primary border-y border-r border-ayur-border shadow-sm flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-ayur-light text-ayur-primary flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-ayur-dark">OPD & Consultation Hours</h4>
+              <p class="text-xs text-gray-600 mt-1 leading-relaxed">
+                <strong>Monday to Saturday:</strong><br>
+                Morning: 09:00 AM – 01:00 PM<br>
+                Evening: 05:00 PM – 08:30 PM<br>
+                <strong>Sunday:</strong> 10:00 AM – 01:00 PM (By Pre-Appointment)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Instant Direct Query Form -->
+        <div class="lg:col-span-7 bg-white p-8 rounded-2xl border border-ayur-border shadow-md">
+          <h3 class="font-serif text-xl font-bold text-ayur-dark mb-1">Send Clinical Query / Message</h3>
+          <p class="text-xs text-gray-500 mb-6">Our senior coordinator will get back to you with doctor availability within 2 hours.</p>
+
+          <form onsubmit="handleContactInquiry(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Your Full Name *</label>
+                <input type="text" id="inq_name" required placeholder="e.g. Anand Patel" class="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone (WhatsApp) *</label>
+                <input type="tel" id="inq_phone" required placeholder="+91 00000 00000" class="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Email ID</label>
+                <input type="email" id="inq_email" placeholder="patient@gmail.com" class="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Consultation Mode</label>
+                <select id="inq_mode" class="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+                  <option value="In-Clinic Visit (Gota, Ahmedabad)">In-Clinic Visit (Ahmedabad)</option>
+                  <option value="Online Video Consultation">Online Video Consultation</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Health Concern / Message *</label>
+              <textarea id="inq_message" rows="4" required placeholder="Describe your symptoms, how long you have had them, or ask any question..." class="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-ayur-primary hover:bg-ayur-dark text-white font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane text-ayur-gold"></i> Send Query Via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Embedded Google Map -->
+      <div class="mt-12 rounded-2xl overflow-hidden border-4 border-white shadow-xl">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14678.932402123512!2d72.5312384!3d23.1068864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e832692257d07%3A0x6b6c2cfb37b02db3!2sGota%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 5. INTERACTIVE MULTI-STEP APPOINTMENT SCHEDULER MODAL                     -->
+  <!-- ========================================================================= -->
+  <div id="bookingModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[92vh] overflow-y-auto border border-ayur-border fade-in relative">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-ayur-dark to-ayur-primary text-white p-5 sm:p-6 flex items-center justify-between sticky top-0 z-10">
+        <div>
+          <span class="text-ayur-gold text-xs font-bold uppercase tracking-widest"><i class="fa-solid fa-calendar-check mr-1"></i> Patient Booking Portal</span>
+          <h3 class="font-serif text-lg sm:text-xl font-bold mt-0.5">Schedule Doctor Consultation</h3>
+        </div>
+        <button onclick="closeBookingModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Step Indicator Tracker -->
+      <div class="bg-ayur-light px-6 py-3 border-b border-ayur-border flex justify-between text-[11px] sm:text-xs font-bold text-gray-500">
+        <span id="stepTracker1" class="text-ayur-primary font-bold"><i class="fa-solid fa-1 mr-1"></i> Specialty</span>
+        <span id="stepTracker2" class="text-gray-400"><i class="fa-solid fa-2 mr-1"></i> Doctor & Mode</span>
+        <span id="stepTracker3" class="text-gray-400"><i class="fa-solid fa-3 mr-1"></i> Date & Slot</span>
+        <span id="stepTracker4" class="text-gray-400"><i class="fa-solid fa-4 mr-1"></i> Patient Info</span>
+      </div>
+
+      <div class="p-6">
+        <!-- FORM STEP 1: Department / Specialty -->
+        <div id="bookStep1" class="booking-step space-y-4">
+          <h4 class="font-serif font-bold text-ayur-dark text-base">Step 1: What treatment or consultation do you require?</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button type="button" onclick="selectBookingSpecialty('Nadi Pariksha & General Consultation')" class="spec-opt-btn p-3.5 border-2 border-ayur-border rounded-xl text-left hover:border-ayur-primary transition-all active:scale-[0.99] border-ayur-primary bg-ayur-light">
+              <strong class="text-xs sm:text-sm text-gray-900 block">Nadi Pariksha & Consultation</strong>
+              <span class="text-[11px] text-gray-500">Root diagnosis & customized herbal chart</span>
+            </button>
+            <button type="button" onclick="selectBookingSpecialty('Panchakarma Detox Therapy')" class="spec-opt-btn p-3.5 border-2 border-ayur-border rounded-xl text-left hover:border-ayur-primary transition-all active:scale-[0.99]">
+              <strong class="text-xs sm:text-sm text-gray-900 block">Panchakarma Detox</strong>
+              <span class="text-[11px] text-gray-500">Virechana, Vamana, Shirodhara, Basti</span>
+            </button>
+            <button type="button" onclick="selectBookingSpecialty('Spine & Joint Arthritis Care')" class="spec-opt-btn p-3.5 border-2 border-ayur-border rounded-xl text-left hover:border-ayur-primary transition-all active:scale-[0.99]">
+              <strong class="text-xs sm:text-sm text-gray-900 block">Spine & Joint Care</strong>
+              <span class="text-[11px] text-gray-500">Sciatica, Disc herniation, Kati Basti</span>
+            </button>
+            <button type="button" onclick="selectBookingSpecialty('Skin & Hair Rejuvenation')" class="spec-opt-btn p-3.5 border-2 border-ayur-border rounded-xl text-left hover:border-ayur-primary transition-all active:scale-[0.99]">
+              <strong class="text-xs sm:text-sm text-gray-900 block">Skin & Hair Disorders</strong>
+              <span class="text-[11px] text-gray-500">Psoriasis, Eczema, Severe hair loss</span>
+            </button>
+          </div>
+          <input type="hidden" id="selectedSpecialty" value="Nadi Pariksha & General Consultation">
+          <div class="pt-4 flex justify-end">
+            <button onclick="goToBookingStep(2)" class="bg-ayur-primary hover:bg-ayur-dark text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-all">
+              Continue to Step 2 <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- FORM STEP 2: Choose Doctor & Mode -->
+        <div id="bookStep2" class="booking-step hidden space-y-4">
+          <h4 class="font-serif font-bold text-ayur-dark text-base">Step 2: Select Preferred Doctor & Mode</h4>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Physician:</label>
+            <select id="selectedDoctor" class="w-full p-3 text-xs sm:text-sm border border-gray-300 rounded-xl focus:outline-none focus:border-ayur-primary">
+              <option value="Dr. Jagdish Sharma (Chief Panchakarma Vaidya)">Dr. Jagdish Sharma (Chief Panchakarma Vaidya - BAMS MD)</option>
+              <option value="Dr. Neha Trivedi (Gynec & Hormonal Care)">Dr. Neha Trivedi (Gynec & Hormonal Care - BAMS PGD)</option>
+              <option value="Dr. Pradeep Varma (Spine & Shalya Specialist)">Dr. Pradeep Varma (Spine & Shalya Specialist - BAMS MS)</option>
+              <option value="Any Available Senior Doctor">First Available Senior Doctor</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Consultation Mode:</label>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="border-2 border-ayur-border p-3 rounded-xl flex items-center gap-2 cursor-pointer hover:border-ayur-primary">
+                <input type="radio" name="consultMode" value="In-Clinic Visit (Gota, Ahmedabad)" checked class="accent-ayur-primary">
+                <span class="text-xs font-bold text-gray-800">In-Clinic Visit</span>
+              </label>
+              <label class="border-2 border-ayur-border p-3 rounded-xl flex items-center gap-2 cursor-pointer hover:border-ayur-primary">
+                <input type="radio" name="consultMode" value="Online Video Consultation" class="accent-ayur-primary">
+                <span class="text-xs font-bold text-gray-800">Online Video Call</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="pt-4 flex justify-between">
+            <button onclick="goToBookingStep(1)" class="text-gray-500 hover:text-gray-800 text-xs font-bold">
+              <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+            <button onclick="goToBookingStep(3)" class="bg-ayur-primary hover:bg-ayur-dark text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-all">
+              Continue to Step 3 <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- FORM STEP 3: Date & Slot Selection -->
+        <div id="bookStep3" class="booking-step hidden space-y-4">
+          <h4 class="font-serif font-bold text-ayur-dark text-base">Step 3: Select Date & Available Time Slot</h4>
+          
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Appointment Date:</label>
+            <input type="date" id="selectedDate" class="w-full p-3 text-xs sm:text-sm border border-gray-300 rounded-xl focus:outline-none focus:border-ayur-primary">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Available Time Slot:</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="slotPickerGrid">
+              <button type="button" onclick="selectTimeSlot(this, '09:30 AM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg hover:border-ayur-primary">09:30 AM</button>
+              <button type="button" onclick="selectTimeSlot(this, '10:30 AM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg bg-ayur-primary text-white">10:30 AM</button>
+              <button type="button" onclick="selectTimeSlot(this, '11:45 AM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg hover:border-ayur-primary">11:45 AM</button>
+              <button type="button" onclick="selectTimeSlot(this, '12:30 PM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg hover:border-ayur-primary">12:30 PM</button>
+              <button type="button" onclick="selectTimeSlot(this, '05:30 PM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg hover:border-ayur-primary">05:30 PM</button>
+              <button type="button" onclick="selectTimeSlot(this, '06:30 PM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg hover:border-ayur-primary">06:30 PM</button>
+              <button type="button" onclick="selectTimeSlot(this, '07:15 PM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg hover:border-ayur-primary">07:15 PM</button>
+              <button type="button" onclick="selectTimeSlot(this, '08:00 PM')" class="slot-btn p-2.5 text-xs font-bold border border-gray-300 rounded-lg hover:border-ayur-primary">08:00 PM</button>
+            </div>
+            <input type="hidden" id="selectedTimeSlot" value="10:30 AM">
+          </div>
+
+          <div class="pt-4 flex justify-between">
+            <button onclick="goToBookingStep(2)" class="text-gray-500 hover:text-gray-800 text-xs font-bold">
+              <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+            <button onclick="goToBookingStep(4)" class="bg-ayur-primary hover:bg-ayur-dark text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-all">
+              Continue to Step 4 <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- FORM STEP 4: Patient Info & Confirmation Trigger -->
+        <div id="bookStep4" class="booking-step hidden space-y-4">
+          <h4 class="font-serif font-bold text-ayur-dark text-base">Step 4: Patient Contact Information</h4>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Patient Full Name *</label>
+              <input type="text" id="patientName" required placeholder="e.g. Ramesh Patel" class="w-full p-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">WhatsApp Phone Number *</label>
+              <input type="tel" id="patientPhone" required placeholder="10-digit number" class="w-full p-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Patient Age</label>
+              <input type="number" id="patientAge" placeholder="e.g. 42" class="w-full p-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Gender</label>
+              <select id="patientGender" class="w-full p-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Chief Health Complaint / Symptoms</label>
+            <textarea id="patientComplaint" rows="3" placeholder="Briefly describe your condition (e.g. 2 years of lower back ache, digestion trouble)..." class="w-full p-2.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-ayur-primary"></textarea>
+          </div>
+
+          <div class="pt-4 flex justify-between items-center">
+            <button onclick="goToBookingStep(3)" class="text-gray-500 hover:text-gray-800 text-xs font-bold">
+              <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+            <button onclick="generateConfirmationSlip()" class="bg-ayur-gold hover:bg-ayur-goldhover text-ayur-dark font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2">
+              <i class="fa-solid fa-receipt"></i> Generate Booking Slip &amp; Confirm
+            </button>
+          </div>
+        </div>
+
+        <!-- Printable / Shareable Confirmation Slip -->
+        <div id="bookingConfirmationSlip" class="hidden space-y-5">
+          <div id="printableSlip" class="border-2 border-dashed border-ayur-primary/40 bg-ayur-cream p-6 rounded-2xl relative">
+            <div class="text-center pb-4 border-b border-gray-300">
+              <span class="text-xs uppercase tracking-widest text-ayur-gold font-bold">Appointment Voucher</span>
+              <h2 class="font-serif text-xl font-bold text-ayur-dark">VAIDVIK AYURVEDA HOSPITAL</h2>
+              <p class="text-[11px] text-gray-500">Western Prime, FF-20, Gota, Ahmedabad • Tel: +91 74350-23360</p>
+            </div>
+
+            <div class="py-4 grid grid-cols-2 gap-4 text-xs">
+              <div>
+                <span class="text-gray-500 block">Token Number:</span>
+                <strong id="slipToken" class="text-base text-ayur-primary">VDK-8942</strong>
+              </div>
+              <div>
+                <span class="text-gray-500 block">Consultation Date & Slot:</span>
+                <strong id="slipDateTime" class="text-gray-900">Oct 24, 2026 at 10:30 AM</strong>
+              </div>
+              <div>
+                <span class="text-gray-500 block">Patient Name:</span>
+                <strong id="slipPatient" class="text-gray-900">Ramesh Patel</strong>
+              </div>
+              <div>
+                <span class="text-gray-500 block">Consulting Doctor:</span>
+                <strong id="slipDoctor" class="text-gray-900">Dr. Jagdish Sharma</strong>
+              </div>
+              <div>
+                <span class="text-gray-500 block">Specialty / Treatment:</span>
+                <strong id="slipSpecialty" class="text-gray-900">Nadi Pariksha</strong>
+              </div>
+              <div>
+                <span class="text-gray-500 block">Mode:</span>
+                <strong id="slipMode" class="text-ayur-primary">In-Clinic Visit</strong>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-gray-300 text-[11px] text-gray-500 italic">
+              Please present this voucher or SMS at the reception 10 minutes prior to your consultation slot.
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 justify-end">
+            <button onclick="window.print()" class="bg-gray-800 text-white px-4 py-2.5 rounded-xl text-xs font-bold hover:bg-black transition-all">
+              <i class="fa-solid fa-print mr-1"></i> Print / Save Slip
+            </button>
+            <button onclick="sendAppointmentToWhatsApp()" class="bg-[#25D366] text-white px-5 py-2.5 rounded-xl text-xs font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shadow">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Send Slip to Reception WhatsApp
+            </button>
+            <button onclick="closeBookingModal()" class="text-xs text-gray-500 hover:text-gray-800 px-3 py-2 font-semibold">
+              Done
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. LIVE SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-start justify-center pt-20 px-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-5 border border-ayur-border fade-in">
+      <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+        <h4 class="font-serif font-bold text-sm text-ayur-dark"><i class="fa-solid fa-magnifying-glass text-ayur-gold mr-1"></i> Search Vaidvik Portal</h4>
+        <button onclick="closeSearchModal()" class="text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="mt-3">
+        <input type="text" id="siteSearchInput" onkeyup="performLiveSearch()" placeholder="Search 'Shirodhara', 'Back pain', 'PCOD', 'Dr. Jagdish'..." class="w-full p-3 text-sm border border-gray-300 rounded-xl focus:outline-none focus:border-ayur-primary">
+      </div>
+      <div id="searchResultsBox" class="mt-3 max-h-60 overflow-y-auto space-y-2 text-xs">
+        <p class="text-gray-400 italic text-center py-4">Type any symptom, treatment, or doctor name above.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. LIGHTBOX MODAL (Image Zoom) -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/85 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-4xl w-full text-center" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-2xl hover:text-ayur-gold">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="lightboxImg" src="" alt="Enlarged Hospital View" class="max-h-[80vh] mx-auto rounded-2xl shadow-2xl border-2 border-white/20">
+      <p id="lightboxCaption" class="text-white text-sm mt-3 font-serif"></p>
+    </div>
+  </div>
+
+  <!-- 8. DETAILS MODAL (Treatments & Blogs) -->
+  <div id="detailsModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-ayur-border fade-in relative">
+      <button onclick="closeDetailsModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <span id="detailBadge" class="text-[11px] font-bold uppercase tracking-wider text-ayur-gold block">Clinical Protocol</span>
+      <h3 id="detailTitle" class="font-serif text-xl font-bold text-ayur-dark mt-1"></h3>
+      <p id="detailSubtitle" class="text-xs text-gray-500 italic mt-1"></p>
+      
+      <div class="my-4 p-4 bg-ayur-light rounded-xl space-y-2 text-xs">
+        <p><strong>Indications:</strong> <span id="detailIndications"></span></p>
+        <p><strong>Recommended Duration:</strong> <span id="detailDuration"></span></p>
+        <p><strong>Estimated Package:</strong> <span id="detailPrice" class="font-bold text-ayur-primary"></span></p>
+      </div>
+
+      <div class="flex justify-end gap-3 pt-2">
+        <button onclick="closeDetailsModal()" class="px-4 py-2 text-xs text-gray-600 font-semibold">Close</button>
+        <button onclick="closeDetailsModal(); openBookingModal();" class="px-5 py-2 text-xs font-bold bg-ayur-primary text-white rounded-lg hover:bg-ayur-dark transition-all">Book This Consultation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. LEFT FIXED SOCIAL STRIP -->
+  <div class="fixed left-3 top-1/2 -translate-y-1/2 z-30 hidden sm:flex flex-col gap-2">
+    <a href="https://www.facebook.com/people/Dwija-Ayurveda/61552510014371/" target="_blank" rel="noopener noreferrer" title="Facebook" class="w-9 h-9 rounded-full bg-white shadow-md text-ayur-primary hover:bg-ayur-primary hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/dwija_ayurveda/" target="_blank" rel="noopener noreferrer" title="Instagram" class="w-9 h-9 rounded-full bg-white shadow-md text-ayur-primary hover:bg-ayur-primary hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/917435023360" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="w-9 h-9 rounded-full bg-white shadow-md text-[#25D366] hover:bg-[#25D366] hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+
+  <!-- 10. FLOATING WHATSAPP CHAT POPUP WIDGET -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+    <!-- Chat Window -->
+    <div id="waChatBox" class="hidden mb-3 bg-white rounded-2xl shadow-2xl border border-gray-200 w-72 sm:w-80 overflow-hidden fade-in">
+      <div class="bg-[#075e54] text-white p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-white overflow-hidden flex items-center justify-center flex-shrink-0">
+            <img src="images/logo.png" alt="Vaidvik Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'font-serif font-bold text-xs text-[#075e54]\'>VA</span>';">
+          </div>
+          <div>
+            <h5 class="text-xs font-bold leading-tight">VAIDVIK AYURVEDA HOSPITAL</h5>
+            <span class="text-[10px] text-emerald-300 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online Helpdesk</span>
+          </div>
+        </div>
+        <button onclick="toggleWaChat()" class="text-white/80 hover:text-white text-base"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="p-4 bg-[#e5ddd5] space-y-3 max-h-60 overflow-y-auto">
+        <div class="bg-white rounded-tr-xl rounded-b-xl p-3 text-xs shadow-sm max-w-[90%]">
+          Namaste 🙏 Welcome to Vaidvik Ayurveda Hospital. How can our Vaidyas assist you today?
+        </div>
+      </div>
+
+      <div class="p-3 bg-white border-t border-gray-100 flex flex-col gap-2">
+        <a href="https://wa.me/917435023360?text=Hello%20Vaidvik%20Ayurveda,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="w-full bg-[#25D366] text-white text-center py-2.5 rounded-xl font-bold text-xs hover:bg-[#20bd5a] transition-all flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-sm"></i> Start WhatsApp Consultation
+        </a>
+      </div>
+    </div>
+
+    <!-- Toggle Button -->
+    <button onclick="toggleWaChat()" class="w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:shadow-2xl flex items-center justify-center text-2xl hover:scale-105 transition-all" aria-label="Open WhatsApp Support">
+      <i class="fa-brands fa-whatsapp"></i>
+    </button>
+  </div>
+
+  <!-- 11. GLOBAL 4-COLUMN FOOTER -->
+  <footer class="bg-ayur-dark text-slate-300 pt-16 pb-8 border-t border-white/10 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Col 1: About -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full overflow-hidden bg-ayur-light border border-ayur-gold flex items-center justify-center flex-shrink-0">
+              <img src="images/logo.png" alt="Vaidvik Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'font-serif font-bold text-xs text-ayur-primary\'>VA</span>';">
+            </div>
+            <div>
+              <span class="font-serif font-bold text-white text-sm block">VAIDVIK AYURVEDA</span>
+              <span class="text-[10px] text-ayur-gold tracking-widest uppercase">Panchakarma Hospital</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            VAIDVIK AYURVEDA AND PANCHAKARMA HOSPITAL is committed to delivering authentic classical Ayurvedic medicine and personalized Panchakarma care with clinical integrity.
+          </p>
+        </div>
+
+        <!-- Col 2: Treatments -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-white font-bold text-sm tracking-wide border-b border-white/15 pb-2">Treatments</h4>
+          <ul class="text-xs space-y-2 text-slate-400">
+            <li><a href="javascript:void(0)" onclick="navigateTo('treatments')" class="hover:text-ayur-gold transition-colors">Panchakarma Detox Therapy</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('treatments')" class="hover:text-ayur-gold transition-colors">Nadi Pariksha (Pulse Diagnosis)</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('treatments')" class="hover:text-ayur-gold transition-colors">Shirodhara Stress Protocols</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('treatments')" class="hover:text-ayur-gold transition-colors">Kati Basti Spinal Care</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('treatments')" class="hover:text-ayur-gold transition-colors">Psoriasis & Skin Protocols</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Navigation -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-white font-bold text-sm tracking-wide border-b border-white/15 pb-2">Quick Navigation</h4>
+          <ul class="text-xs space-y-2 text-slate-400">
+            <li><a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-ayur-gold transition-colors">Home Page</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('about')" class="hover:text-ayur-gold transition-colors">About Our Hospital</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('doctors')" class="hover:text-ayur-gold transition-colors">Our Physicians</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('gallery')" class="hover:text-ayur-gold transition-colors">Hospital Photo Tour</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('contact')" class="hover:text-ayur-gold transition-colors">Contact & OPD Timings</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Clinic -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-white font-bold text-sm tracking-wide border-b border-white/15 pb-2">Clinic Information</h4>
+          <div class="text-xs space-y-2 text-slate-400">
+            <p><i class="fa-solid fa-map-location-dot text-ayur-gold mr-1.5"></i> First Floor, Western Prime, FF-20, Gota, Ahmedabad, Gujarat 382470</p>
+            <p><i class="fa-solid fa-phone text-ayur-gold mr-1.5"></i> +91 74350-23360</p>
+            <p><i class="fa-solid fa-envelope text-ayur-gold mr-1.5"></i> vaidvikayurveda@gmail.com</p>
+            <p><i class="fa-solid fa-clock text-ayur-gold mr-1.5"></i> Mon-Sat: 9AM - 1PM &amp; 5PM - 8:30PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <span>&copy; 2026 VAIDVIK AYURVEDA AND PANCHAKARMA HOSPITAL. All Rights Reserved.</span>
+        <div class="flex gap-4">
+          <a href="javascript:void(0)" onclick="navigateTo('about')" class="hover:text-slate-300">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="navigateTo('contact')" class="hover:text-slate-300">Hospital OPD</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 12. FULL JAVASCRIPT CONTROLLERS                                            -->
+  <!-- ========================================================================= -->
+  <script>
+    // -------------------------------------------------------------
+    // SPA ROUTER: Instant Tab / Page Navigation
+    // -------------------------------------------------------------
+    function navigateTo(pageId) {
+      // Hide all page views
+      document.querySelectorAll('.page-view').forEach(view => {
+        view.classList.add('hidden');
+      });
+
+      // Show targeted view
+      const targetView = document.getElementById('view-' + pageId);
+      if (targetView) {
+        targetView.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Update active nav link styling
+      document.querySelectorAll('.nav-tab').forEach(btn => {
+        btn.classList.remove('text-ayur-primary', 'border-ayur-primary');
+        btn.classList.add('text-gray-600', 'border-transparent');
+      });
+      const activeBtn = document.getElementById('nav-' + pageId);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-gray-600', 'border-transparent');
+        activeBtn.classList.add('text-ayur-primary', 'border-ayur-primary');
+      }
+    }
+
+    function toggleMobileNav() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    // -------------------------------------------------------------
+    // INTERACTIVE DOSHA (PRAKRITI) QUIZ CONTROLLER
+    // -------------------------------------------------------------
+    let doshaScores = { vata: 0, pitta: 0, kapha: 0 };
+
+    function scrollToDoshaQuiz() {
+      navigateTo('home');
+      setTimeout(() => {
+        document.getElementById('dosha-section').scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+
+    function recordQuizAnswer(dosha, currentStep) {
+      doshaScores[dosha]++;
+      document.getElementById('q' + currentStep).classList.add('hidden');
+
+      if (currentStep < 3) {
+        document.getElementById('q' + (currentStep + 1)).classList.remove('hidden');
+      } else {
+        showQuizResults();
+      }
+    }
+
+    function showQuizResults() {
+      document.getElementById('quizResult').classList.remove('hidden');
+
+      // Determine highest dosha
+      let maxDosha = 'vata';
+      if (doshaScores.pitta > doshaScores[maxDosha]) maxDosha = 'pitta';
+      if (doshaScores.kapha > doshaScores[maxDosha]) maxDosha = 'kapha';
+
+      const nameEl = document.getElementById('doshaName');
+      const descEl = document.getElementById('doshaDesc');
+      const iconEl = document.getElementById('doshaIcon');
+      const recEl = document.getElementById('doshaRecommendation');
+
+      if (maxDosha === 'vata') {
+        nameEl.innerText = 'Vata Constitution (Air & Space Principle)';
+        descEl.innerText = 'You possess a quick, creative, and enthusiastic nature. When imbalanced, Vata triggers dryness, constipation, joint cracking, anxiety, and sleep irregularities.';
+        iconEl.innerHTML = '<i class="fa-solid fa-wind"></i>';
+        recEl.innerText = 'Recommended: Abhyanga with warm sesame oil, Shirodhara & cooked nourishing foods.';
+      } else if (maxDosha === 'pitta') {
+        nameEl.innerText = 'Pitta Constitution (Fire & Water Principle)';
+        descEl.innerText = 'You possess sharp intellect, strong metabolism, and leadership qualities. When aggravated by stress or spicy foods, it causes acid reflux, skin eruptions, and inflammation.';
+        iconEl.innerHTML = '<i class="fa-solid fa-fire"></i>';
+        recEl.innerText = 'Recommended: Takradhara, Virechana liver detox & cooling herbs (Shatavari, Amla).';
+      } else {
+        nameEl.innerText = 'Kapha Constitution (Earth & Water Principle)';
+        descEl.innerText = 'You have remarkable stamina, calmness, and strong immunity. When aggravated, it causes fluid retention, weight gain, sluggish metabolism, and respiratory congestion.';
+        iconEl.innerHTML = '<i class="fa-solid fa-mountain"></i>';
+        recEl.innerText = 'Recommended: Udwarthanam (dry herbal powder scrub), Vamana therapy & active exercise.';
+      }
+    }
+
+    function resetDoshaQuiz() {
+      doshaScores = { vata: 0, pitta: 0, kapha: 0 };
+      document.getElementById('quizResult').classList.add('hidden');
+      document.getElementById('q2').classList.add('hidden');
+      document.getElementById('q3').classList.add('hidden');
+      document.getElementById('q1').classList.remove('hidden');
+    }
+
+    // -------------------------------------------------------------
+    // PANCHAKARMA ESTIMATOR CALCULATOR
+    // -------------------------------------------------------------
+    const therapyRates = {
+      shirodhara: { time: 45, price: 1500 },
+      abhyanga: { time: 60, price: 1800 },
+      katibasti: { time: 40, price: 1200 },
+      nasya: { time: 30, price: 900 }
+    };
+
+    function calculateTherapyEstimate() {
+      const checkboxes = document.querySelectorAll('.therapy-calc-check:checked');
+      let totalTime = 0;
+      let totalPrice = 0;
+
+      checkboxes.forEach(cb => {
+        const item = therapyRates[cb.value];
+        if (item) {
+          totalTime += item.time;
+          totalPrice += item.price;
+        }
+      });
+
+      document.getElementById('calcCount').innerText = `${checkboxes.length} procedure(s)`;
+      document.getElementById('calcDuration').innerText = `${totalTime} minutes`;
+      document.getElementById('calcPrice').innerText = `₹${totalPrice.toLocaleString('en-IN')}`;
+    }
+
+    function bookWithPreselectedTherapies() {
+      openBookingModal();
+      document.getElementById('selectedSpecialty').value = 'Panchakarma Detox Therapy';
+      goToBookingStep(2);
+    }
+
+    // -------------------------------------------------------------
+    // TREATMENTS FILTER ENGINE
+    // -------------------------------------------------------------
+    function filterTreatments(category) {
+      document.querySelectorAll('.treatment-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.classList.add('bg-ayur-primary', 'text-white');
+          btn.classList.remove('bg-white', 'text-gray-700');
+        } else {
+          btn.classList.remove('bg-ayur-primary', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-700');
+        }
+      });
+
+      const cards = document.querySelectorAll('.treatment-item');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // -------------------------------------------------------------
+    // MULTI-STEP BOOKING MODAL CONTROLLER
+    // -------------------------------------------------------------
+    function openBookingModal() {
+      document.getElementById('bookingModal').classList.remove('hidden');
+      document.getElementById('bookingConfirmationSlip').classList.add('hidden');
+      goToBookingStep(1);
+
+      // Default date to tomorrow
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      document.getElementById('selectedDate').value = tomorrow.toISOString().split('T')[0];
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+
+    function goToBookingStep(step) {
+      // Hide all steps
+      for (let i = 1; i <= 4; i++) {
+        const stepEl = document.getElementById('bookStep' + i);
+        if (stepEl) stepEl.classList.add('hidden');
+
+        const trackerEl = document.getElementById('stepTracker' + i);
+        if (trackerEl) {
+          if (i <= step) {
+            trackerEl.classList.remove('text-gray-400');
+            trackerEl.classList.add('text-ayur-primary', 'font-bold');
+          } else {
+            trackerEl.classList.remove('text-ayur-primary', 'font-bold');
+            trackerEl.classList.add('text-gray-400');
+          }
+        }
+      }
+      document.getElementById('bookStep' + step).classList.remove('hidden');
+    }
+
+    function selectBookingSpecialty(specName) {
+      document.getElementById('selectedSpecialty').value = specName;
+      document.querySelectorAll('.spec-opt-btn').forEach(btn => {
+        btn.classList.remove('border-ayur-primary', 'bg-ayur-light');
+      });
+      event.currentTarget.classList.add('border-ayur-primary', 'bg-ayur-light');
+    }
+
+    function selectTimeSlot(el, slot) {
+      document.getElementById('selectedTimeSlot').value = slot;
+      document.querySelectorAll('.slot-btn').forEach(btn => {
+        btn.classList.remove('bg-ayur-primary', 'text-white');
+      });
+      el.classList.add('bg-ayur-primary', 'text-white');
+    }
+
+    function bookWithDoctor(doctorName) {
+      openBookingModal();
+      document.getElementById('selectedDoctor').value = doctorName;
+      goToBookingStep(2);
+    }
+
+    let currentBookingData = {};
+
+    function generateConfirmationSlip() {
+      const name = document.getElementById('patientName').value.trim();
+      const phone = document.getElementById('patientPhone').value.trim();
+
+      if (!name || !phone) {
+        const toast = document.createElement('div');
+        toast.className = 'fixed top-5 right-5 bg-red-600 text-white px-5 py-3 rounded-xl text-xs font-bold shadow-2xl z-[9999]';
+        toast.innerText = 'Please provide patient full name and WhatsApp phone number.';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3500);
+        return;
+      }
+
+      const specialty = document.getElementById('selectedSpecialty').value;
+      const doctor = document.getElementById('selectedDoctor').value;
+      const date = document.getElementById('selectedDate').value;
+      const time = document.getElementById('selectedTimeSlot').value;
+      const complaint = document.getElementById('patientComplaint').value || 'None';
+      const mode = document.querySelector('input[name="consultMode"]:checked').value;
+      const token = 'VDK-' + Math.floor(1000 + Math.random() * 9000);
+
+      currentBookingData = { name, phone, specialty, doctor, date, time, complaint, mode, token };
+
+      // Populate Slip UI
+      document.getElementById('slipToken').innerText = token;
+      document.getElementById('slipDateTime').innerText = `${date} at ${time}`;
+      document.getElementById('slipPatient').innerText = name;
+      document.getElementById('slipDoctor').innerText = doctor;
+      document.getElementById('slipSpecialty').innerText = specialty;
+      document.getElementById('slipMode').innerText = mode;
+
+      // Hide form steps and show slip
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById('bookStep' + i).classList.add('hidden');
+      }
+      document.getElementById('bookingConfirmationSlip').classList.remove('hidden');
+    }
+
+    function sendAppointmentToWhatsApp() {
+      const { token, name, phone, doctor, specialty, date, time, mode, complaint } = currentBookingData;
+      const hospitalWA = "917435023360";
+
+      const message = `*NEW VAIDVIK CONSULTATION BOOKING (%23${token})*%0A` +
+                      `*Patient Name:* ${encodeURIComponent(name)}%0A` +
+                      `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                      `*Doctor:* ${encodeURIComponent(doctor)}%0A` +
+                      `*Specialty:* ${encodeURIComponent(specialty)}%0A` +
+                      `*Slot:* ${encodeURIComponent(date)} at ${encodeURIComponent(time)}%0A` +
+                      `*Mode:* ${encodeURIComponent(mode)}%0A` +
+                      `*Complaint:* ${encodeURIComponent(complaint)}`;
+
+      window.open(`https://wa.me/${hospitalWA}?text=${message}`, '_blank');
+    }
+
+    // -------------------------------------------------------------
+    // CONTACT INQUIRY DISPATCHER
+    // -------------------------------------------------------------
+    function handleContactInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('inq_name').value;
+      const phone = document.getElementById('inq_phone').value;
+      const email = document.getElementById('inq_email').value || 'N/A';
+      const mode = document.getElementById('inq_mode').value;
+      const msg = document.getElementById('inq_message').value;
+
+      const hospitalWA = "917435023360";
+      const message = `*VAIDVIK AYURVEDA - OPD INQUIRY*%0A` +
+                      `*Name:* ${encodeURIComponent(name)}%0A` +
+                      `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                      `*Email:* ${encodeURIComponent(email)}%0A` +
+                      `*Mode:* ${encodeURIComponent(mode)}%0A` +
+                      `*Message:* ${encodeURIComponent(msg)}`;
+
+      window.open(`https://wa.me/${hospitalWA}?text=${message}`, '_blank');
+    }
+
+    // -------------------------------------------------------------
+    // MODALS: Search, Lightbox & Treatment Details
+    // -------------------------------------------------------------
+    function openSearchModal() {
+      document.getElementById('searchModal').classList.remove('hidden');
+      document.getElementById('siteSearchInput').focus();
+    }
+    function closeSearchModal() {
+      document.getElementById('searchModal').classList.add('hidden');
+    }
+
+    const searchableItems = [
+      { title: 'Shirodhara Therapy', type: 'Treatment', page: 'treatments' },
+      { title: 'Kati & Janu Basti (Spine Care)', type: 'Treatment', page: 'treatments' },
+      { title: 'Virechana Purgation Detox', type: 'Treatment', page: 'treatments' },
+      { title: 'PCOD & Thyroid Metabolic Protocol', type: 'Treatment', page: 'treatments' },
+      { title: 'Psoriasis & Skin Protocol', type: 'Treatment', page: 'treatments' },
+      { title: 'Dr. Jagdish Sharma (MD Panchakarma)', type: 'Doctor', page: 'doctors' },
+      { title: 'Dr. Neha Trivedi (Gynec Care)', type: 'Doctor', page: 'doctors' },
+      { title: 'Dr. Pradeep Varma (Spine Specialist)', type: 'Doctor', page: 'doctors' },
+      { title: 'Nadi Pariksha Pulse Diagnosis', type: 'Diagnostics', page: 'home' }
+    ];
+
+    function performLiveSearch() {
+      const q = document.getElementById('siteSearchInput').value.toLowerCase().trim();
+      const box = document.getElementById('searchResultsBox');
+      
+      if (!q) {
+        box.innerHTML = '<p class="text-gray-400 italic text-center py-4">Type any symptom, treatment, or doctor name above.</p>';
+        return;
+      }
+
+      const matches = searchableItems.filter(item => item.title.toLowerCase().includes(q));
+      if (matches.length === 0) {
+        box.innerHTML = '<p class="text-gray-500 text-center py-4">No direct matches found. Try "Spine", "Panchakarma", or "Doctor".</p>';
+      } else {
+        box.innerHTML = matches.map(m => `
+          <div onclick="navigateTo('${m.page}'); closeSearchModal();" class="p-2.5 bg-ayur-cream hover:bg-ayur-light rounded-xl cursor-pointer flex justify-between items-center transition-colors">
+            <strong>${m.title}</strong>
+            <span class="text-[10px] uppercase font-bold text-ayur-primary bg-white px-2 py-0.5 rounded border border-gray-200">${m.type}</span>
+          </div>
+        `).join('');
+      }
+    }
+
+    function openLightbox(src, caption) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxCaption').innerText = caption;
+      document.getElementById('lightboxModal').classList.remove('hidden');
+    }
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+    }
+
+    function openTreatmentModal(title, subtitle, indications, duration, price) {
+      document.getElementById('detailTitle').innerText = title;
+      document.getElementById('detailSubtitle').innerText = subtitle;
+      document.getElementById('detailIndications').innerText = indications;
+      document.getElementById('detailDuration').innerText = duration;
+      document.getElementById('detailPrice').innerText = price;
+      document.getElementById('detailsModal').classList.remove('hidden');
+    }
+
+    function openBlogModal(title, content) {
+      document.getElementById('detailBadge').innerText = 'Clinical Article';
+      document.getElementById('detailTitle').innerText = title;
+      document.getElementById('detailSubtitle').innerText = 'Vaidvik Health Wisdom';
+      document.getElementById('detailIndications').innerText = content;
+      document.getElementById('detailDuration').innerText = '5 Min Read';
+      document.getElementById('detailPrice').innerText = 'Free Wellness Knowledge';
+      document.getElementById('detailsModal').classList.remove('hidden');
+    }
+
+    function closeDetailsModal() {
+      document.getElementById('detailsModal').classList.add('hidden');
+    }
+
+    function toggleWaChat() {
+      const box = document.getElementById('waChatBox');
+      box.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
