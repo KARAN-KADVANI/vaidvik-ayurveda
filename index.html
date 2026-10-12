@@ -143,6 +143,9 @@
         <button onclick="navigateTo('contact'); toggleMobileNav()" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
           <span>Contact &amp; Clinic Location</span> <i class="fa-solid fa-chevron-right text-xs"></i>
         </button>
+        <a href="https://www.instagram.com/vaidvik_ayurveda/" target="_blank" rel="noopener noreferrer" class="text-left py-2 text-gray-700 border-b border-gray-100 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2"><i class="fa-brands fa-instagram text-ayur-primary"></i> Instagram</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
         <button onclick="openBookingModal(); toggleMobileNav()" class="mt-3 w-full bg-ayur-primary text-white py-3 rounded-xl text-center font-bold tracking-wide flex items-center justify-center gap-2">
           <i class="fa-solid fa-calendar-check text-ayur-gold"></i>
           Schedule Doctor Consultation
@@ -1172,11 +1175,11 @@
     </div>
   </div>
 
-  <!-- 9. FIXED SOCIAL STRIP -->
-  <div class="fixed left-3 top-1/2 -translate-y-1/2 z-30 hidden sm:flex flex-col gap-2">
-    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook" class="w-9 h-9 rounded-full bg-white shadow-md text-ayur-primary hover:bg-ayur-primary hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/vaidvik_ayurveda/" target="_blank" rel="noopener noreferrer" title="Instagram" class="w-9 h-9 rounded-full bg-white shadow-md text-ayur-primary hover:bg-ayur-primary hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://wa.me/919328465676" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="w-9 h-9 rounded-full bg-white shadow-md text-[#25D366] hover:bg-[#25D366] hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-whatsapp"></i></a>
+  <!-- 9. FIXED SOCIAL STRIP (Instagram stays visible on phones; other icons from small screens up) -->
+  <div class="fixed z-40 flex flex-col gap-2 bottom-6 left-6 sm:left-3 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 sm:z-30">
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook" class="hidden sm:flex w-9 h-9 rounded-full bg-white shadow-md text-ayur-primary hover:bg-ayur-primary hover:text-white items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/vaidvik_ayurveda/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram" class="w-14 h-14 sm:w-9 sm:h-9 rounded-full bg-white shadow-lg sm:shadow-md text-ayur-primary hover:bg-ayur-primary hover:text-white flex items-center justify-center text-2xl sm:text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/919328465676" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="hidden sm:flex w-9 h-9 rounded-full bg-white shadow-md text-[#25D366] hover:bg-[#25D366] hover:text-white items-center justify-center text-sm transition-all hover:scale-110 border border-gray-200"><i class="fa-brands fa-whatsapp"></i></a>
   </div>
 
   <!-- 10. FLOATING WHATSAPP CHAT POPUP WIDGET -->
@@ -1266,6 +1269,10 @@
             <p><i class="fa-solid fa-phone text-ayur-primary mr-1.5"></i> +91 9328465676</p>
             <p><i class="fa-solid fa-envelope text-ayur-primary mr-1.5"></i> vaidvikayurveda2026@gmail.com</p>
             <p><i class="fa-solid fa-clock text-ayur-primary mr-1.5"></i> Mon-Sat: 9AM - 1PM &amp; 5PM - 8:30PM</p>
+            <a href="https://www.instagram.com/vaidvik_ayurveda/" target="_blank" rel="noopener noreferrer" title="Instagram" class="mt-2 inline-flex items-center gap-2 text-ayur-primary font-semibold hover:text-ayur-dark transition-colors">
+              <span class="w-8 h-8 rounded-full bg-ayur-light hover:bg-ayur-primary hover:text-white flex items-center justify-center transition-all"><i class="fa-brands fa-instagram"></i></span>
+              Instagram
+            </a>
           </div>
         </div>
       </div>
