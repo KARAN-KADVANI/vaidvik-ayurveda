@@ -46,9 +46,24 @@ body {
   outline-offset: 2px;
 }
 
+.logo-frame {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid #E5E1D7;
+  background: #FAF8F2;
+}
 .logo-mark {
-  object-fit: cover;
-  object-position: center 16%;
+  position: absolute !important;
+  width: 174.2% !important;
+  height: 174.2% !important;
+  max-width: none !important;
+  left: -12.5% !important;
+  top: -16.7% !important;
 }
 
 .eyebrow {
