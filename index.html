@@ -76,20 +76,22 @@
   <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-ayur-border shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
       <!-- Hospital Brand Logo -->
-      <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3.5 group">
-        <div class="w-14 h-14 rounded-full overflow-hidden bg-ayur-light border-2 border-ayur-primary/30 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform flex-shrink-0">
-          <img src="logo.jpeg" alt="Vaidvik Ayurveda Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-ayur-light text-ayur-primary flex items-center justify-center font-serif font-bold text-lg\'>VA</div>';">
-        </div>
-        <div>
-          <div class="font-serif text-lg sm:text-xl font-extrabold text-ayur-dark tracking-wide leading-none group-hover:text-ayur-primary transition-colors">
-            VAIDVIK AYURVEDA
-          </div>
-          <span class="text-[10px] sm:text-xs font-semibold tracking-widest text-ayur-gold uppercase block mt-1">
-            Panchakarma Hospital
-          </span>
-        </div>
-      </a>
-
+      <!-- Hero Image & Badge -->
+<div class="lg:col-span-5 relative">
+  <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+    <img src="hero.jpeg" alt="Panchakarma Ayurvedic Therapy" class="w-full h-96 object-cover hover:scale-105 transition-all duration-500">
+    <div class="absolute inset-0 bg-gradient-to-t from-ayur-dark/80 via-transparent to-transparent"></div>
+    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-xl p-4 text-ayur-dark shadow-md flex items-center gap-3 border border-ayur-border">
+      <div class="w-10 h-10 rounded-full bg-ayur-light text-ayur-primary flex items-center justify-center text-lg flex-shrink-0">
+        <i class="fa-solid fa-hand-holding-heart text-ayur-gold"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs uppercase tracking-wider text-ayur-primary">Holistic Pulse Diagnosis</h4>
+        <p class="text-[11px] text-gray-600">Personalized Prakriti analysis before every Panchakarma therapy session.</p>
+      </div>
+    </div>
+  </div>
+</div>
       <!-- Desktop Navigation Menu -->
       <nav class="hidden lg:flex items-center gap-7">
         <button onclick="navigateTo('home')" id="nav-home" class="nav-tab text-sm font-semibold text-ayur-primary border-b-2 border-ayur-primary pb-1 transition-all">Home</button>
