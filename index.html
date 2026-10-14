@@ -76,22 +76,20 @@
   <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-ayur-border shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
       <!-- Hospital Brand Logo -->
-      <!-- Hero Image & Badge -->
-<div class="lg:col-span-5 relative">
-  <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-    <img src="hero.jpeg" alt="Panchakarma Ayurvedic Therapy" class="w-full h-96 object-cover hover:scale-105 transition-all duration-500">
-    <div class="absolute inset-0 bg-gradient-to-t from-ayur-dark/80 via-transparent to-transparent"></div>
-    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-xl p-4 text-ayur-dark shadow-md flex items-center gap-3 border border-ayur-border">
-      <div class="w-14 h-14 rounded-full bg-ayur-light text-ayur-primary flex items-center justify-center text-lg flex-shrink-0">
-        <i class="fa-solid fa-hand-holding-heart text-ayur-gold"></i>
-      </div>
-      <div>
-        <h4 class="font-bold text-xs uppercase tracking-wider text-ayur-primary">Holistic Pulse Diagnosis</h4>
-        <p class="text-[11px] text-gray-600">Personalized Prakriti analysis before every Panchakarma therapy session.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3.5 group">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden bg-ayur-light border-2 border-ayur-primary/30 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform flex-shrink-0">
+          <img src="logo.png" alt="Vaidvik Ayurveda Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-ayur-light text-ayur-primary flex items-center justify-center font-serif font-bold text-lg\'>VA</div>';">
+        </div>
+        <div>
+          <div class="font-serif text-lg sm:text-xl font-extrabold text-ayur-dark tracking-wide leading-none group-hover:text-ayur-primary transition-colors">
+            VAIDVIK AYURVEDA
+          </div>
+          <span class="text-[10px] sm:text-xs font-semibold tracking-widest text-ayur-gold uppercase block mt-1">
+            Panchakarma Hospital
+          </span>
+        </div>
+      </a>
+
       <!-- Desktop Navigation Menu -->
       <nav class="hidden lg:flex items-center gap-7">
         <button onclick="navigateTo('home')" id="nav-home" class="nav-tab text-sm font-semibold text-ayur-primary border-b-2 border-ayur-primary pb-1 transition-all">Home</button>
@@ -181,8 +179,8 @@
     <!-- VIEW 1: HOME PAGE -->
     <section id="view-home" class="page-view">
       <!-- Light Airy Hero Section -->
-      <div class="relative bg-gradient-to-b from-ayur-light via-white to-[#f4f8f5] text-ayur-dark py-16 lg:py-24 px-4 sm:px-8 border-b border-ayur-border overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div class="relative bg-gradient-to-b from-ayur-light via-white to-[#f4f8f5] text-ayur-dark py-12 lg:py-24 px-4 sm:px-8 border-b border-ayur-border overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-ayur-dark leading-tight tracking-tight">
               Root-Cause Ayurvedic Healing &amp; Classical Panchakarma
@@ -203,7 +201,7 @@
           <!-- Hero Image & Badge -->
           <div class="lg:col-span-5 relative">
             <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-              <img src="pulse.jpeg" alt="Panchakarma Ayurvedic Therapy" class="w-full h-96 object-cover hover:scale-105 transition-all duration-500">
+              <img src="pulse.jpeg" alt="Panchakarma Ayurvedic Therapy" class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-all duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-ayur-dark/80 via-transparent to-transparent"></div>
               <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-xl p-4 text-ayur-dark shadow-md flex items-center gap-3 border border-ayur-border">
                 <div class="w-10 h-10 rounded-full bg-ayur-light text-ayur-primary flex items-center justify-center text-lg flex-shrink-0">
@@ -658,9 +656,7 @@
           <div class="p-8">
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
               <div class="w-28 h-28 rounded-2xl overflow-hidden bg-ayur-light border-2 border-ayur-primary/30 flex items-center justify-center flex-shrink-0 shadow-xs">
-                <div class="w-28 h-28 rounded-2xl overflow-hidden bg-ayur-light border-2 border-ayur-primary/30 flex items-center justify-center flex-shrink-0 shadow-xs">
-                  <img src="Dr.Vidhi Kadvani.jpeg" alt="Dr.Vidhi Kadvani" class="w-full h-full object-cover">
-                </div>
+                <img src="Dr.Vidhi Kadvani.jpeg" alt="Dr. Vidhi Kadvani" class="w-full h-full object-cover">
               </div>
               <div class="space-y-1">
                 <span class="text-xs font-bold uppercase tracking-wider text-ayur-gold">Chief Medical Officer & Consultant</span>
@@ -826,6 +822,12 @@
             <div class="w-12 h-12 rounded-xl bg-ayur-light text-ayur-primary flex items-center justify-center text-xl flex-shrink-0">
               <i class="fa-solid fa-location-dot"></i>
             </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-ayur-dark">Hospital Location</h4>
+              <p class="text-xs text-gray-600 mt-1">
+                FF-20, Western Prime, Gota, Ahmedabad, Gujarat 382481
+              </p>
+            </div>
           </div>
 
           <div class="bg-white p-6 rounded-2xl border-l-4 border-ayur-gold border-y border-r border-ayur-border shadow-xs flex items-start gap-4">
@@ -960,7 +962,7 @@
           </div>
         </div>
 
-        <!-- FORM STEP 2: Doctor & Mode (Dr Vidhi Kadvani) -->
+        <!-- FORM STEP 2: Doctor & Mode -->
         <div id="bookStep2" class="booking-step hidden space-y-4">
           <h4 class="font-serif font-bold text-ayur-dark text-base">Step 2: Select Preferred Doctor & Mode</h4>
           <div>
