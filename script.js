@@ -11,19 +11,38 @@ function navigateTo(pageId) {
   }
 
   document.querySelectorAll('.nav-tab').forEach(btn => {
-    btn.classList.remove('text-ayur-primary', 'border-ayur-primary');
-    btn.classList.add('text-gray-600', 'border-transparent');
+    btn.classList.remove('text-ayur-dark', 'border-ayur-primary');
+    btn.classList.add('text-ayur-ink', 'border-transparent');
+    btn.removeAttribute('aria-current');
   });
   const activeBtn = document.getElementById('nav-' + pageId);
   if (activeBtn) {
-    activeBtn.classList.remove('text-gray-600', 'border-transparent');
-    activeBtn.classList.add('text-ayur-primary', 'border-ayur-primary');
+    activeBtn.classList.remove('text-ayur-ink', 'border-transparent');
+    activeBtn.classList.add('text-ayur-dark', 'border-ayur-primary');
+    activeBtn.setAttribute('aria-current', 'page');
   }
+
+  document.querySelectorAll('.mobile-link').forEach(btn => {
+    const on = btn.getAttribute('data-page') === pageId;
+    btn.classList.toggle('bg-ayur-light', on);
+    btn.classList.toggle('text-ayur-dark', on);
+    btn.classList.toggle('text-ayur-ink', !on);
+    if (on) btn.setAttribute('aria-current', 'page');
+    else btn.removeAttribute('aria-current');
+  });
 }
 
 function toggleMobileNav() {
   const drawer = document.getElementById('mobileDrawer');
+  const icon = document.getElementById('mobileMenuIcon');
+  const btn = document.getElementById('mobileMenuBtn');
   drawer.classList.toggle('hidden');
+  const isOpen = !drawer.classList.contains('hidden');
+  if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  if (icon) {
+    icon.classList.toggle('fa-bars', !isOpen);
+    icon.classList.toggle('fa-xmark', isOpen);
+  }
 }
 
 // DOSHA QUIZ CONTROLLER
@@ -121,11 +140,13 @@ function bookWithPreselectedTherapies() {
 function filterTreatments(category) {
   document.querySelectorAll('.treatment-filter-btn').forEach(btn => {
     if (btn.getAttribute('data-category') === category) {
-      btn.classList.add('bg-ayur-primary', 'text-white');
-      btn.classList.remove('bg-white', 'text-gray-700');
+      btn.classList.add('bg-ayur-primary', 'text-white', 'border-ayur-primary');
+      btn.classList.remove('bg-white', 'text-ayur-ink', 'border-ayur-border');
+      btn.setAttribute('aria-pressed', 'true');
     } else {
-      btn.classList.remove('bg-ayur-primary', 'text-white');
-      btn.classList.add('bg-white', 'text-gray-700');
+      btn.classList.remove('bg-ayur-primary', 'text-white', 'border-ayur-primary');
+      btn.classList.add('bg-white', 'text-ayur-ink', 'border-ayur-border');
+      btn.setAttribute('aria-pressed', 'false');
     }
   });
 
@@ -162,11 +183,11 @@ function goToBookingStep(step) {
     const trackerEl = document.getElementById('stepTracker' + i);
     if (trackerEl) {
       if (i <= step) {
-        trackerEl.classList.remove('text-gray-400');
-        trackerEl.classList.add('text-ayur-primary', 'font-bold');
+        trackerEl.classList.remove('text-ayur-muted');
+        trackerEl.classList.add('text-ayur-primary');
       } else {
-        trackerEl.classList.remove('text-ayur-primary', 'font-bold');
-        trackerEl.classList.add('text-gray-400');
+        trackerEl.classList.remove('text-ayur-primary');
+        trackerEl.classList.add('text-ayur-muted');
       }
     }
   }
@@ -203,7 +224,7 @@ function generateConfirmationSlip() {
 
   if (!name || !phone) {
     const toast = document.createElement('div');
-    toast.className = 'fixed top-5 right-5 bg-red-600 text-white px-5 py-3 rounded-xl text-xs font-bold shadow-2xl z-[9999]';
+    toast.className = 'fixed top-5 right-5 max-w-xs bg-[#7A2E2E] text-white px-5 py-3 rounded-md text-sm font-semibold shadow-lg z-[9999]';
     toast.innerText = 'Please provide patient full name and WhatsApp phone number.';
     document.body.appendChild(toast);
     setTimeout(() => toast.remove(), 3500);
@@ -293,18 +314,18 @@ function performLiveSearch() {
   const box = document.getElementById('searchResultsBox');
 
   if (!q) {
-    box.innerHTML = '<p class="text-gray-400 italic text-center py-4">Type any symptom, treatment, or doctor name above.</p>';
+    box.innerHTML = '<p class="text-ayur-muted text-center py-4">Type any symptom, treatment, or doctor name above.</p>';
     return;
   }
 
   const matches = searchableItems.filter(item => item.title.toLowerCase().includes(q));
   if (matches.length === 0) {
-    box.innerHTML = '<p class="text-gray-500 text-center py-4">No direct matches found. Try "Spine", "Panchakarma", or "Dr. Vidhi".</p>';
+    box.innerHTML = '<p class="text-ayur-muted text-center py-4">No direct matches found. Try "Spine", "Panchakarma", or "Dr. Vidhi".</p>';
   } else {
     box.innerHTML = matches.map(m => `
-      <div onclick="navigateTo('${m.page}'); closeSearchModal();" class="p-2.5 bg-ayur-light hover:bg-white rounded-xl cursor-pointer flex justify-between items-center transition-colors border border-ayur-border">
-        <strong>${m.title}</strong>
-        <span class="text-[10px] uppercase font-bold text-ayur-primary bg-white px-2 py-0.5 rounded border border-gray-200">${m.type}</span>
+      <div onclick="navigateTo('${m.page}'); closeSearchModal();" class="p-3 bg-ayur-light hover:bg-white rounded-md cursor-pointer flex justify-between items-center gap-3 transition-colors border border-ayur-border">
+        <strong class="text-ayur-dark font-medium">${m.title}</strong>
+        <span class="text-[10px] uppercase tracking-wide font-semibold text-ayur-primary bg-white px-2 py-0.5 rounded border border-ayur-border">${m.type}</span>
       </div>
     `).join('');
   }
@@ -344,5 +365,23 @@ function closeDetailsModal() {
 
 function toggleWaChat() {
   const box = document.getElementById('waChatBox');
+  const btn = document.getElementById('waChatToggle');
   box.classList.toggle('hidden');
+  const isOpen = !box.classList.contains('hidden');
+  if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 }
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+
+  ['bookingModal', 'searchModal', 'lightboxModal', 'detailsModal'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.classList.contains('hidden')) el.classList.add('hidden');
+  });
+
+  const wa = document.getElementById('waChatBox');
+  if (wa && !wa.classList.contains('hidden')) toggleWaChat();
+
+  const drawer = document.getElementById('mobileDrawer');
+  if (drawer && !drawer.classList.contains('hidden')) toggleMobileNav();
+});
