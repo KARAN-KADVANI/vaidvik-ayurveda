@@ -1,5 +1,43 @@
-html { scroll-behavior: smooth; }
-body { background-color: #f7faf8; color: #233129; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background-color: #f7faf8;
+  color: #233129;
+  overflow-x: clip;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+/* Keep form text at 16px on phones so iOS does not zoom the page on focus */
+@media (max-width: 639px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  footer {
+    padding-bottom: 6.5rem;
+  }
+}
+
+.mobile-safe-bottom {
+  bottom: max(1.25rem, calc(env(safe-area-inset-bottom) + 0.75rem));
+}
+
+/* Keep the social rail in the bottom corner on phones and tablets so it does not cover the headline. */
+.social-rail {
+  bottom: max(1.25rem, calc(env(safe-area-inset-bottom) + 0.75rem));
+}
+@media (min-width: 1024px) {
+  .social-rail {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+  }
+}
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }

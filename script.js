@@ -23,7 +23,20 @@ function navigateTo(pageId) {
 
 function toggleMobileNav() {
   const drawer = document.getElementById('mobileDrawer');
+  const icon = document.getElementById('mobileMenuIcon');
+  const button = document.getElementById('mobileMenuButton');
+  const willOpen = drawer.classList.contains('hidden');
+
   drawer.classList.toggle('hidden');
+  document.body.classList.toggle('overflow-hidden', willOpen);
+
+  if (icon) {
+    icon.classList.toggle('fa-bars', !willOpen);
+    icon.classList.toggle('fa-xmark', willOpen);
+  }
+  if (button) {
+    button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  }
 }
 
 // DOSHA QUIZ CONTROLLER
@@ -143,6 +156,7 @@ function filterTreatments(category) {
 function openBookingModal() {
   document.getElementById('bookingModal').classList.remove('hidden');
   document.getElementById('bookingConfirmationSlip').classList.add('hidden');
+  document.body.classList.add('overflow-hidden');
   goToBookingStep(1);
 
   const tomorrow = new Date();
@@ -152,6 +166,10 @@ function openBookingModal() {
 
 function closeBookingModal() {
   document.getElementById('bookingModal').classList.add('hidden');
+  const drawer = document.getElementById('mobileDrawer');
+  if (!drawer || drawer.classList.contains('hidden')) {
+    document.body.classList.remove('overflow-hidden');
+  }
 }
 
 function goToBookingStep(step) {
